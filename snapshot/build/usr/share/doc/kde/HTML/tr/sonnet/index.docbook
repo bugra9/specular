@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+  <!ENTITY kappname "&sonnet;">
+  <!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<article lang="&language;">
+
+<articleinfo>
+<!--title
+>The &sonnet; Handbook</title-->
+<title
+>İmla Denetimi Penceresi</title>
+
+<authorgroup>
+<author
+>&David.Sweet; &David.Sweet.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2010-09-02</date>
+<releaseinfo
+>&kde; 4.5</releaseinfo>
+<abstract>
+<para
+>&sonnet; &kate;, &kmail;, &kword; gibi &kde; uygulamaları tarafından kullanılan bir yazım denetleyicisidir. Birçok özgür yazım denetleyicisi için bir &GUI; ön ucudur. Gerek duyulan yazım deteleyiciler ve sözlükler hakkında daha fazla bilgiyi &systemsettings; içerisindeki <ulink url="help:kcontrol/spellchecking"
+>Yazım Denetleyici</ulink
+> modülünin belgelendirmelerinde bulabilirsiniz.</para>
+
+</abstract>
+<keywordset>
+<keyword
+>imlâ</keyword>
+<keyword
+>yazım denetimi</keyword>
+<keyword
+>sonnet</keyword>
+<keyword
+>ispell</keyword>
+<keyword
+>aspell</keyword>
+<keyword
+>denetle</keyword>
+<keyword
+>denetleyici</keyword>
+<keyword
+>KDE</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+><anchor id="spelldlg"/> Penceredeki en üst satır, belgenizde bulunan yanlış yazılmış olma olasılığı olan sözcüğü gösterir. &sonnet; bu sözcüğü değiştirmek için uygun bir sözcük arar. Birkaç tane bulabilir.</para>
+<para
+>En iyi öneri  <guilabel
+>Bununla değiştir</guilabel
+> ögesinin sağ tarafında bulunur. Bu değiştirme işlemini kabul etmek için  <guibutton
+>Değiştir</guibutton
+> düğmesine tıklayın.</para
+> 
+<para
+>Öneriler listesinden bir sözcük seçerek hatalı yazılan sözcüğü değiştirmek için <guibutton
+>Değiştir</guibutton
+> düğmesine tıklayın. <guibutton
+>Öner</guibutton
+> düğmesinin yardımıyla, öneriler listesine sözlükten daha fazla sözcük ekleyebilirsiniz.</para>
+
+<para
+>Yazım şeklinizin aslını korumak için <guilabel
+>Yoksay</guilabel
+> düğmesine tıklayın.</para>
+
+<para
+><guibutton
+>Tamamlandı</guibutton
+> düğmesine tıklamak yazım denetimini durdurur ve yapılan değişiklikleri korur.</para>
+
+<para
+><guibutton
+>İptal</guibutton
+> düğmesine tıklamak yazım denetimini durdurur ve yapılan değişiklikleri iptal eder.</para>
+
+<para
+><guibutton
+>Tümünü Değiştir</guibutton
+> düğmesine tıklamak ilk anda <guibutton
+>Değiştir</guibutton
+> düğmesine tıklamakla aynı işlevi görür ancak değiştirme işlemi için seçilen sözcükleri kullanarak hatalı yazılan tüm sözcükleri, hatalı yazım tekrar ediyorsa belgenin sonuna kadar arayarak, değiştirir.</para>
+
+<para
+><guibutton
+>Tümünü Yoksay</guibutton
+> düğmesine tıklamak o noktadaki yazım hatasını yoksayar. Aynı hatalı yazım belgenin devamında da yoksayılacaktır.</para>
+
+<para
+><guibutton
+>Sözlüğe Ekle</guibutton
+> düğmesine tıklayarak hatalı yazım olarak gösterilen sözcüğü kişisel sözlüğünüze ekleyebilirsiniz (sistem sözlüğünden ayrı bir sözlüktür ve sizin tarafınızdan yapılan eklemeler diğer kullanıcılar tarafından görülemez).</para>
+
+<para
+>Bu pencerenin en altındaki <guilabel
+>Dil</guilabel
+> kutucuğu, geçici olarak başka bir dil seçmenizi sağlar.</para>
+
+<para
+>Öntanımlı yapılandırma seçenekleri &systemsettings; içerisindeki ilgili <ulink url="help:kcontrol/spellchecking"
+>Yazım Denetleyici</ulink
+> modülünde bulunur.</para>
+
+</article>
+<!--
+Local Variables:
+mode: sgml
+sgml-omittag: nil
+sgml-shorttag: t
+sgml-general-insert-case: lower
+End:
+-->
+

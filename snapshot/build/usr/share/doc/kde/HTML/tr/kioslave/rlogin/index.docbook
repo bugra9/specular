@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
+"dtd/kdex.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+	
+<article lang="&language;" id="rlogin">
+<title
+>rlogin</title>
+<articleinfo>
+<authorgroup>
+<author
+><personname
+><firstname
+>Christian</firstname
+><surname
+>Bunting</surname
+></personname
+></author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+</articleinfo>
+<para
+>&konqueror; kullanarak, rlogin servisine sahip sunucularda yeni bir  <command
+>rlogin</command
+> oturumu başlatabilirsiniz.</para>
+
+<para
+>Bu kioslave özelliğini kullanmak için &konqueror;  Adres çubuğuna  <userinput
+>rlogin:/baglanilacak_makine_adresi</userinput
+> yazmanız gerekir</para>
+
+<para
+>Bu, &konsole; ile bir <command
+>rlogin</command
+> oturumu başlatır ve size bu oturum için gereken parolayı sorar.</para>
+
+<para
+><command
+>rlogin</command
+>, o anda &kde; oturumunu açarken kullandığınız kullanıcı adını kullanır.</para>
+
+<para
+>Parolanızı başarılı bir şekilde girdikten sonra uzak oturumunuzu başlatabilirsiniz.</para>
+
+<para
+>Kılavuza bakın: <ulink url="man:/rlogin"
+>rlogin</ulink
+>. </para>
+
+
+<!-- By Christian Bunting (need to ask if he wants crediting and email) -->
+
+</article>

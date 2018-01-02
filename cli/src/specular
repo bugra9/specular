@@ -1,0 +1,636 @@
+#!/bin/bash
+
+# =================================================================
+# Specular v0.6
+# 
+# @link https://github.com/bugra9/specular
+# @author bugra9 https://github.com/bugra9
+# @contributors https://github.com/bugra9/specular/graphs/contributors
+# @license GPLv3 https://github.com/bugra9/specular/blob/master/LICENSE
+# 
+# [TR] Bu programın KESİNLİKLE HİÇBİR TEMİNATI YOKTUR
+# [EN] This program comes with ABSOLUTELY NO WARRANTY
+# =================================================================
+
+# =================================================================
+# 					İçindekiler
+# 					
+# 	1. Ana Fonksiyonlar ........................ 48
+# 	1.1. prepare ............................... 52
+# 	1.2. format ................................ 76
+# 	1.2. formatMBR ............................. 112
+# 	1.2. formatGPT ............................. 134
+# 	1.2. formatHybrid .......................... 154
+# 	1.3. installGrub ........................... 185
+# 	1.4. updateGrub ............................ 206
+# 	1.5. persistent ............................ 212
+# 	1.6. resizePersistent ...................... 225
+# 	1.7. copy .................................. 235
+# 	1.8. extract ............................... 249
+# 	1.9. repairGrub ............................ 279
+# 	1.10. main ................................. 287
+# 	
+# 	2. Yardımcı Fonksiyonlar ................... 429
+# 	2.1. print ................................. 432
+# 	2.3. writeGrubCfg .......................... 473
+# 	2.4. mountUSB .............................. 606
+# 	2.5. umountUSB ............................. 653
+# 	
+# 	3. Bilgi Fonksiyonları ..................... 680
+# 	3.1. displayHelp ........................... 684
+# 	3.2. displayVersion ........................ 694
+# 	3.3. displayDevices ........................ 699
+# 	3.4. getPartitions ......................... 721
+# 	
+# =================================================================
+
+# =================================================================
+# 					Ana Fonksiyonlar
+# =================================================================
+
+# (install) Diski biçimlendirip grubu yükler.
+function prepare() {
+	# Öntanım yapılıyor...
+	if [[ $scheme == "hybrid" ]] ; then
+		systemType="all"
+	elif [[ $scheme == "gpt" ]] ; then
+		systemType="uefi"
+	fi
+
+	format
+	
+	sleep 5
+	print "v1" "Installing Grub..."
+	
+	installGrub
+	
+	mountUSB
+	mkdir -p "$partitionDataPath/specular/linux"
+	mkdir -p "$partitionDataPath/specular/persistent"
+	umountUSB
+
+	print "v1" "Success"
+}
+
+# Diski biçimlendirir.
+function format() {	
+	# Kullanıcıdan veri silinmesini kabul ettiğine dair onay alalım.
+	if [[ $silent == 0 ]] ; then
+		print "WARNING: ALL DATA ON DEVICE '%s' WILL BE DESTROYED. \nAre you sure you want to continue? (y/n)" "${device}"
+		read -n 1 -r
+		print " "
+		ch=$(gettext -s -e "WARNING: ALL DATA ON DEVICE '%s' WILL BE DESTROYED. \nAre you sure you want to continue? (y/n)" | grep "\(\K([^/]+)" -oP)
+		if [[ ! $REPLY == "$ch" ]] ; then
+			exit 1
+		fi
+	fi
+	# Biçimlendirilecek aygıt üzerinde 
+	# bağlı olan bölümlerin bağı kaldırılıyor.
+	mountedParts=($(mount | grep "${device}" | cut -d' ' -f1))
+	for part in "${mountedParts[@]}" ; do
+		umount "${part}" >& /dev/null
+		returnCodes=$?
+		if [[ $returnCodes != 0 ]] ; then
+			printE "Error: the device is in use by another process. \nPlease close any other process that may be accessing the device. \nError Code: %s" "${returnCodes}"
+			exit 1
+		fi
+	done
+
+	print "v1" "Clearing MBR/PBR/GPT structures..."
+	dd if=/dev/zero "of=$device" bs=4M count=1 >& /dev/null
+	sync
+
+	if [[ $scheme == "mbr" ]] ; then
+		formatMBR
+	elif [[ $scheme == "gpt" ]] ; then
+		formatGPT
+	elif [[ $scheme == "hybrid" ]] ; then
+		formatHybrid
+	fi
+}
+
+function formatMBR() {
+	print "v1" "Writing master boot record..."
+	# MBR kaydı oluşturalım
+	parted -s "$device" mklabel msdos
+	# 46M boyutunda Grub ve efi için bölüm oluşturalım.
+	parted -s "$device" mkpart primary fat32 4 50
+	# Grub ve efi için oluşturduğumuz bölümü gizliyoruz.
+	parted -s "$device" set 1 hidden on
+	# Depolama için geri kalan alanda bölüm oluşturalım.
+	parted -s "$device" mkpart primary ntfs 50 -- -1s
+
+	blockdev --rereadpt "$device" || true
+	partprobe "$device"
+	sleep 3
+	# EFI bölümünü fat32 olarak biçimlendirelim.
+	print "v1" "Formatting (%s)..." "${device}1"
+	mkfs.vfat -F 32 "${device}1" >& /dev/null
+	# Veri bölümünü ntfs olarak biçimlendirelim.
+	print "v1" "Formatting (%s)..." "${device}2"
+	mkfs.ntfs --label "${name}" --quick "${device}2" >& /dev/null
+}
+
+function formatGPT() {
+	print "v1" "Writing GPT..."
+	# Tüm bölümleri silelim.
+	sgdisk --zap-all "$device" >& /dev/null
+	# 50M boyutunda EFI için bölüm oluşturalım.
+	sgdisk --new 1::+44M --typecode 1:ef00 --change-name 1:"EFI System Partition" "$device" >& /dev/null
+	# Geri kalan alana da normal kullanım için bölüm atayalım.
+	sgdisk --new 2::: --typecode 2:0C01 --change-name 2:"SPECULAR" "$device" >& /dev/null
+	# Aygıttaki tüm bölümleri ayıralım.
+	umount --force ${device}* 2>/dev/null || true
+	# EFI bölümünü fat32 olarak biçimlendirelim.
+	print "v1" "Formatting (%s)..." "${device}1"
+	mkfs.vfat -F 32 "${device}1" >& /dev/null
+	# Veri bölümünü ntfs olarak biçimlendirelim.
+	print "v1" "Formatting (%s)..." "${device}2"
+	mkfs.ntfs --label "${name}" --quick "${device}2" >& /dev/null
+	# Aygıttaki tüm bölümleri ayıralım.
+	umount --force ${device}* 2>/dev/null || true
+}
+
+function formatHybrid() {
+	print "v1" "Writing GPT & MBR..."
+	# Tüm bölümleri silelim.
+	sgdisk --zap-all "$device" >& /dev/null
+	# 1M boyutunda bios başlatma bölümü oluşturalım.
+	sgdisk --new 1::+4M --typecode 1:ef02 --change-name 1:"BIOS Boot Partition" "$device" >& /dev/null
+	# 50M boyutunda EFI için bölüm oluşturalım.
+	sgdisk --new 2::+44M --typecode 2:ef00 --change-name 2:"EFI System Partition" "$device" >& /dev/null
+	# Geri kalan alana da normal kullanım için bölüm atayalım.
+	sgdisk --new 3::: --typecode 3:0C01 --change-name 3:"SPECULAR" "$device" >& /dev/null
+	# Aygıttaki tüm bölümleri ayıralım.
+	umount --force ${device}* 2>/dev/null || true
+	# GPT ve MBR bölümleme tablolarının beraber kullanımını ayarlayalım.
+	sgdisk --hybrid 1:2:3 "$device" >& /dev/null
+	# Grubun olacağı bölümü başlatılabilir olarak işaretleyelim.
+	sgdisk --attributes 2:set:2 "$device" >& /dev/null
+	# Aygıttaki tüm bölümleri ayıralım.
+	umount --force ${device}* 2>/dev/null || true
+	# İlk bölümü sıfırlarla doldurarak biçimlendirelim.
+	dd if=/dev/zero of=${device}1 bs=4M count=1 >& /dev/null
+	# EFI bölümünü fat32 olarak biçimlendirelim.
+	print "v1" "Formatting (%s)..." "${device}2"
+	mkfs.vfat -F 32 "${device}2" >& /dev/null
+	# Veri bölümünü ntfs olarak biçimlendirelim.
+	print "v1" "Formatting (%s)..." "${device}3"
+	mkfs.ntfs --label "${name}" --quick "${device}3" >& /dev/null
+	# Aygıttaki tüm bölümleri ayıralım.
+	umount --force ${device}* 2>/dev/null || true
+}
+
+# Grubu yükler.
+function installGrub() {
+	mountUSB
+
+	# Bios için grub kurulumu
+	if [[ $systemType != "uefi" ]] ; then
+		grub-install --target=i386-pc --boot-directory="$partitionGrubPath/specular" "$device" >& /dev/null
+	fi
+
+	# Uefi için grub kurulumu
+	if [[ $systemType != "bios" ]] ; then
+		grub-install --target=x86_64-efi --efi-directory="$partitionGrubPath" --boot-directory="$partitionGrubPath/specular" --removable >& /dev/null
+	fi
+
+	# Grub ayarlarını yazdıralım.
+	mkdir -p "$(dirname "${cfgPath}")"
+	writeGrubCfg
+
+	umountUSB
+}
+
+# Grub ayarlarını günceller.
+function updateGrub() {
+	mountUSB
+	writeGrubCfg
+	umountUSB
+}
+
+function persistent() {
+	tmpdir=$(mktemp -d)
+	echo $1
+	dd if=/dev/zero of=$tmpdir/casper-rw bs=1M count=$1
+	sync
+	mkfs.ext4 -F $tmpdir/casper-rw
+	mountUSB
+	tar -czf "$partitionDataPath/specular/persistent/$1.tar.gz" -C $tmpdir casper-rw
+	sync
+	rm -r "$tmpdir"
+	umountUSB
+}
+
+function resizePersistent() {
+	mountUSB
+	e2fsck -fy "$partitionDataPath/specular/persistent/casper-rw"
+	dd if=/dev/zero bs=1M count=$1 >> "$partitionDataPath/specular/persistent/casper-rw"
+	sync
+	e2fsck -fy "$partitionDataPath/specular/persistent/casper-rw"
+	resize2fs "$partitionDataPath/specular/persistent/casper-rw"
+	umountUSB
+}
+
+function copy() {
+	isWindows=$(isoinfo -d -i "$isoPath" | grep "Publisher id: MICROSOFT CORPORATION")
+	if [[ $isWindows ]] ; then
+		echo "Windows ISO"
+		extract
+	else
+		mountUSB
+		rsync -rlt --info=progress2 "$isoPath" "${partitionDataPath}/specular/linux/"
+		sync
+		umountUSB
+	fi
+}
+
+# Kalıp dosyasını usb belleğin içine açar.
+function extract() {
+	isoMountPath=$(mktemp -d)
+	mkdir -p "$isoMountPath"
+	if [ -f "$isoPath" ]; then
+		mount -o loop,ro -t udf,iso9660 "$isoPath" "$isoMountPath"
+	else
+		mount -o ro "$isoPath" "$isoMountPath"
+	fi
+
+	mountUSB
+
+	freeSpace=$(df --block-size 1 "$partitionDataPath" | grep "$partitionData" | awk '{print $4}')
+	neededSpace=$(du -s "$isoMountPath" --bytes | awk '{print $1}')
+	((neededSpace = neededSpace + 1000 * 1000 * 10))
+
+	if [[ "$neededSpace" -gt "$freeSpace" ]]; then
+		printE "Hata: Bellek üzerinde yeteri kadar boş alan yok."
+		umount $isoMountPath
+		exit 1
+	fi
+
+	print "Copying files..."
+	rsync -rlt --info=progress2 "$isoMountPath"/* "$partitionDataPath"/
+	sync
+	umount $isoMountPath
+	rmdir "${isoMountPath}"
+	umountUSB
+}
+
+# Diskteki grubu onarır.
+function repairGrub() {
+	grub-install $device
+	print "Finalizing, please wait..."
+	sleep 2
+	update-grub
+}
+
+# Verilen parametrelere göre çalışma hazırlığını yapar.
+function main() {
+	while [ ! "$#" -eq 0 ]; do
+		case "$1" in
+			'--help'|'-h')
+				displayHelp
+				exit 0;;
+			'--version'|'-v')
+				displayVersion
+				exit 0;;
+			'--listDevices'|'-l')
+				displayDevices
+				exit 0;;
+			'--partitions')
+				shift
+				device=$(readlink -f "$1")
+				getPartitions;;
+			'--verbose')
+				verbose=2;;
+			'--silent')
+				silent=1;;
+			'--scheme')
+				shift
+				scheme=$1;;
+			'--name')
+				shift
+				name=$1;;
+			'--type')
+				shift
+				systemType=$1;;
+			'--install'|'-i')
+				method='prepare'
+				shift
+				device=$(readlink -f "$1");;
+			'--full')
+				method='full'
+				shift
+				isoPath=$(readlink -f "$1")
+				shift
+				device=$(readlink -f "$1");;
+			'--format')
+				method='format'
+				shift
+				device=$(readlink -f "$1");;
+			'--installGrub')
+				method='installGrub'
+				shift
+				device=$(readlink -f "$1");;
+			'--persistent'|'-p')
+				method='persistent'
+				shift
+				size=$1
+				shift
+				device=$(readlink -f "$1");;
+			'--resizePersistent'|'-pr')
+				method='resizePersistent'
+				shift
+				size=$1
+				shift
+				device=$(readlink -f "$1");;
+			'--extract'|'-e')
+				method='extract'
+				shift
+				isoPath=$(readlink -f "$1")
+				shift
+				device=$(readlink -f "$1");;
+				'--copy')
+				method='copy'
+				shift
+				isoPath=$(readlink -f "$1")
+				shift
+				device=$(readlink -f "$1");;
+			'--updateGrub'|'-u')
+				method='updateGrub'
+				shift
+				device=$(readlink -f "$1");;
+			'--repairGrub'|'-r')
+				method='repairGrub'
+				shift
+				device=$(readlink -f "$1");;
+			* )
+				printE "Error: unknown option - '%s'" "$1"
+				exit 1;;
+		esac
+
+		shift
+	done
+
+	# Aygıt yoksa yazılım sonlandırılır.
+	if [[ "${device}" == "" ]]; then
+		displayHelp
+		exit 1
+	elif [[ $(lsblk -d -p -o MODEL,SIZE,NAME | grep "${device}") == "" ]]; then
+		print "Error: '%s' device not found." "${device}"
+		exit 1
+	fi
+
+	# Yönetici yetkileriyle çalışmıyorsa yazılım sonlandırılır.
+	if [[ $(id -u) != 0 ]]; then
+		printE "Error: you should run this script as root!"
+		exit 1
+	fi
+
+	case "$method" in
+		'prepare')
+			prepare
+			;;
+		'full')
+			prepare
+			copy
+			;;
+		'format')
+			format
+			;;
+		'installGrub')
+			installGrub
+			;;
+		'persistent')
+			persistent $size
+			;;
+		'resizePersistent')
+			resizePersistent $size
+			;;
+		'extract')
+			extract
+			;;
+		'copy')
+			copy
+			;;
+		'updateGrub')
+			updateGrub
+			;;
+		'repairGrub')
+			repairGrub
+			;;
+		* )
+			print "Error: no install method specified!"
+			displayHelp
+			exit 1;;
+	esac
+}
+
+# =================================================================
+# 					Yardımcı Fonksiyonlar
+# =================================================================
+
+function print_i18n() {
+	temp=$(gettext -e -s "$1")
+	printf "${temp}\n" "$2" $3 $4
+}
+function print() {
+	if [[ ("$1" != 'v0' && "$1" != 'v1' && "$1" != 'v2') ]]; then
+		print_i18n "$1" "$2" "$3" "$4"
+	elif [[ ("$1" == 'v0') || 
+				("$1" == 'v1' && $verbose != 0) || 
+				("$1" == 'v2' && $verbose == 2) ]]; then
+		print_i18n "$2" "$3" "$4"
+	fi
+}
+function printV() {
+	if [[ $verbose != 0 && $silent != 1 ]]; then
+		echo -en "\033[0;33m"
+	fi
+	print "$1" "$2" "$3" "$4"
+	if [[ $verbose != 0 && $silent != 1 ]]; then
+		tput sgr0
+	fi
+}
+function printE() {
+	if [[ $verbose != 0 && $silent != 1 ]]; then
+		echo -en "\033[0;31m"
+	fi
+	print "$1" "$2" "$3" "$4"
+	if [[ $verbose != 0 && $silent != 1 ]]; then
+		tput sgr0
+	fi
+}
+function printS() {
+	if [[ $verbose != 0 && $silent != 1 ]]; then
+		echo -en "\033[0;32m"
+	fi
+	print "$1" "$2" "$3" "$4"
+	if [[ $verbose != 0 && $silent != 1 ]]; then
+		tput sgr0
+	fi
+}
+
+function writeGrubCfg() {
+	cp -r /opt/specular/grubcfg/* "$cfgPath/"
+	cp -r /opt/specular/initrd/* "$partitionGrubPath/specular/"
+	if [ -f /opt/specular/snapshot/tr.lz ]; then
+		cp /opt/specular/snapshot/tr.lz "$partitionGrubPath/casper-sn.lz"
+	fi
+}
+
+# /dev/sdX biçiminde belirtilen aygıtı sisteme bağlar.
+function mountUSB() {
+	# Cihaz üzerindeki tüm bölümleri okuyup dizi olarak tanımlıyoruz.
+	partition2=($(ls --color=no -1 "${device}"*))
+
+	# Dizinin uzunluğu 3 den küçükse sorun var demektir. (/dev/sdc /dev/sdc1)
+	if [[ ${#partition2[@]} < 3 ]] ; then
+		printE "Error: this drive contains multiple partitions!"
+		exit 1
+	fi
+
+	# Dizideki son eleman bizim aradığımız bölüm
+	partitionData=${partition2[-1]}
+	# Dizideki sondan ikinci eleman bizim aradığımız bölüm
+	partitionGrub=${partition2[-2]}
+
+	# Eğer bağlıysa bağlandığı noktayı öğreniyoruz.
+	# Bağlı değilse belirlediğimiz noktaya bağlıyoruz.
+	temp=($(mount | grep "$partitionData"))
+	if [[ "${temp}" == "" ]] ; then
+		partitionDataPath=$(mktemp -d)
+		#mkdir -p "$partitionDataPath"
+		mount "$partitionData" "$partitionDataPath"
+		# Yazılım aracılığıyla bağladığımız için işlemlerin 
+		# sonucunda bağı kaldırmamız gerekiyor.
+		mountCondD="1"
+	else
+		partitionDataPath="${temp[2]}"
+		mountCondD="0"
+	fi
+
+	temp2=($(mount | grep "$partitionGrub"))
+	if [[ "${temp2}" == "" ]] ; then
+		partitionGrubPath=$(mktemp -d)
+		#mkdir -p "$partitionGrubPath"
+		mount "$partitionGrub" "$partitionGrubPath"
+		# Yazılım aracılığıyla bağladığımız için işlemlerin 
+		# sonucunda bağı kaldırmamız gerekiyor.
+		mountCondG="1"
+	else
+		partitionGrubPath="${temp2[2]}"
+		mountCondG="0"
+	fi
+
+	# Grub yapılandırma dosyasının bulunduğu konumu değişkene atıyoruz.
+	cfgPath="$partitionGrubPath/specular/grub" 
+}
+
+function umountUSB() {
+	sync
+
+	if [[ "$mountCondD" == "1" ]] ; then
+		umount "${partitionDataPath}" >& /dev/null
+		returnCodes=$?
+		if [[ $returnCodes != 0 ]] ; then
+			printE "Error: unable to securely unmount %s" "${partitionDataPath}"
+		else
+			sleep 1
+			rmdir "${partitionDataPath}"
+		fi
+	fi
+
+	if [[ "$mountCondG" == "1" ]] ; then
+		umount "${partitionGrubPath}" >& /dev/null
+		returnCodes=$?
+		if [[ $returnCodes != 0 ]] ; then
+			printE "Error: unable to securely unmount %s" "${partitionGrubPath}"
+		else
+			sleep 1
+			rmdir "${partitionGrubPath}"
+		fi
+	fi
+}
+
+# =================================================================
+# 					Bilgi Fonksiyonları
+# =================================================================
+
+# Yardım sayfasını içerir.
+function displayHelp() {
+	if [[ "$(dirname $(readlink -f $0) | grep '/usr/bin')" != "" ]]; then
+		temp=$(man specular)
+	else
+		temp=$(man "../man/specular.1.tr")
+	fi
+	echo "$temp"
+}
+
+# Yazılım sürümünü yazdırır.
+function displayVersion() {
+	printf "specular v0.6 \n"
+}
+
+# Bilgisayara bağlı aygıtları listeler.
+function displayDevices() {
+	if [[ $silent == 0 ]] ; then
+		print "v1" "==========================================="
+		printS "v1" "All Storage Devices"
+	fi
+
+	mountedParts=($(ls /sys/block))
+	for part in "${mountedParts[@]}" ; do
+		if [[ $(cat "/sys/block/${part}/removable") == 1 && $(cat "/sys/block/${part}/size") > 0 && $(cat "/sys/block/${part}/device/type") == 0 ]] ; then
+			model=$(cat "/sys/block/${part}/device/model")
+			size=$(cat "/sys/block/${part}/size")
+			size=$((size*512/1000000000))
+
+			echo "${model} ${size}G /dev/${part}"
+		fi
+	done
+
+	if [[ $silent == 0 ]] ; then
+		print "v1" "==========================================="
+	fi
+}
+
+function getPartitions() {
+	device=${device/\/dev\//}
+	temp=($(ls /sys/block/${device} | grep --color=never "${device}"))
+	if [[ ${#temp[@]} < 2 ]] ; then
+		exit 1
+	fi
+	for part in "${temp[@]}" ; do
+		size=$(cat "/sys/block/${device}/${part}/size")
+		size=$((size*512/1000000))
+		if [[ $size == 46  ]] ; then
+			echo -n "/dev/${part}"
+			echo " $(mount | grep "/dev/${part}" | awk '{print $3}')"
+		fi
+	done
+	echo -n "/dev/${temp[-1]}"
+	echo " $(mount | grep "/dev/${temp[-1]}" | awk '{print $3}')"
+	exit 0
+}
+
+# Snap paketleme sistemi için hazırlık
+if [[ "$SNAP" != "" ]] ; then
+	export LOCPATH=$SNAP/usr/lib/locale
+	export MANPATH=$SNAP/usr/share/man
+	export GROFF_FONT_PATH=$SNAP/usr/share/groff/1.22.3/font
+	export GROFF_TMAC_PATH=$SNAP/usr/share/groff/1.22.3/tmac
+	export TEXTDOMAINDIR=$SNAP/usr/share/locale
+fi
+	export TEXTDOMAIN=specular
+
+isoPath=''
+method=''
+device=''
+name=''
+verbose=1
+silent=0
+size=0
+systemType='bios' #bios, uefi, all
+scheme='mbr' #mbr, gpt, hybrid
+
+main "$@"

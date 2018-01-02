@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bootableusb\n"
+"Report-Msgid-Bugs-To: https://github.com/bugra9/BootableUSB/issues\n"
+"POT-Creation-Date: 2016-11-09 09:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+
+msgid "All Storage Devices" 
+msgstr "" 
+
+msgid "Error: mkdosfs or mkfs.msdos program not found!" 
+msgstr "" 
+
+msgid "Install Windows" 
+msgstr "" 
+
+msgid "Boot Linux ISO Image" 
+msgstr "" 
+
+msgid "Run from RAM" 
+msgstr "" 
+
+msgid "Live" 
+msgstr "" 
+
+msgid "Setup" 
+msgstr "" 
+
+msgid "Error: this drive contains multiple partitions!" 
+msgstr "" 
+
+msgid "Error: unable to securely unmount %s" 
+msgstr "" 
+
+msgid "Finalizing, please wait..." 
+msgstr "" 
+
+msgid "Error: the device is in use by another process. \nPlease close any other process that may be accessing the device. \nError Code: %s" 
+msgstr "" 
+
+msgid "Copying files..." 
+msgstr "" 
+
+msgid "Error: unknown option - '%s'" 
+msgstr "" 
+
+msgid "Error: '%s' device not found."
+msgstr ""
+
+msgid "Error: you should run this script as root!" 
+msgstr "" 
+
+msgid "Error: no install method specified!" 
+msgstr "" 
+
+msgid "WARNING: ALL DATA ON DEVICE '%s' WILL BE DESTROYED. \nAre you sure you want to continue? (y/n)"
+msgstr ""
+
+msgid "Operating Systems on Disk"
+msgstr ""
+
+msgid "Reboot"
+msgstr ""
+
+msgid "Installing Grub..."
+msgstr ""
+
+msgid "Success"
+msgstr "Başarılı"
+
+msgid "Clearing MBR/PBR/GPT structures..."
+msgstr ""
+
+msgid "Writing master boot record..."
+msgstr ""
+
+msgid "Formatting (%s)..."
+msgstr ""
+
+msgid "Writing GPT..."
+msgstr ""
+
+msgid "Writing GPT & MBR..."
+msgstr ""

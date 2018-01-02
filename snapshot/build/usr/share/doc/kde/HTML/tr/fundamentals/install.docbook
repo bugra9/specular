@@ -1,0 +1,135 @@
+<chapter id="install">
+<title
+>&kde; Kurulumu</title>
+
+<para
+>&kde;'yi akıllı telefonlar, tabletler, &Microsoft; &Windows;, &MacOS;, &UNIX;, &BSD; ve &Linux; çalıştıran bilgisayarlar gibi çeşitli platformlara kurabilirsiniz. Birçok farklı platform ve dağıtım için ikili paketler vardır. Ayrıca ileri düzey kullanıcılar kaynak kodlardan derleyebilirler.</para>
+
+<sect1 id="install-packages">
+<title
+>Paketlerin Kurulumu</title>
+
+<para
+>Faklı aygıtlar ve platformlar üzerine &kde; kurmayı kolaylaştırmak için dünyanın çeşitli yerlerindeki yüzlerce geliştirici emek vermektedir.</para>
+
+<sect2 id="install-linux">
+<title
+>&Linux;</title>
+
+<para
+>Neredeyse tüm &Linux; dağıtımları tekil uygulamalar ve bütün olarak &plasma-workspaces; için ikili paketleri sunar.</para>
+
+<para
+>Belirli bir uygulamayı kurmak için dağıtımınızın paket koleksiyonuna bakın. &plasma-desktop; gibi plasma-çalışma alanlarından birini kurmak için bir üst-paket (metapackage) arayın ya da <literal
+>kde-desktop</literal
+> gibi bir paket grubunun olup olmadığını kontrol edin.</para>
+
+<note>
+<para
+>Bazı uygulamalar, &kde; ile birleştirilmiş bir paket adı ile diğer çekirdek uygulamalarla birlikte kuruluyor olabilir. Örneğin, &dolphin; <literal
+>kde-baseapps</literal
+> paketinin içerisinde olabilir.</para>
+</note>
+
+<para
+>Eğer dağıtımınızda &kde; paketlerini bulamıyorsanız dağıtımınızın destek kaynaklarına başvurun. Birçok dağıtımın &kde; için ayrı bir ekibi vardır ve bu ekip &kde;'ye özel yardım sağlar.</para>
+
+<!--FIXME: provide steps for common distributions?-->
+
+</sect2>
+
+<sect2 id="install-windows">
+<title
+>&Microsoft; &Windows;</title>
+
+<para
+>Windows üzerinde &kde; Girişimi, &Microsoft; &Windows; için &kappname; uygulamalarının ikili paketlerini sağlarlar. Ayrıca, belirli uygulamaları ve bağımlılıkları kolayca kurmanızı sağlayan  özel bir yükleyici de sunarlar.</para>
+
+<para
+>Bu girişim hakkında daha fazla bilgi almak için <ulink url="http://windows.kde.org/"
+>Windows üzerinde KDE Girişimi</ulink
+> adresine bakın. </para>
+
+<!--FIXME: describe how to use the installer?-->
+
+</sect2>
+
+<sect2 id="install-mac">
+<title
+>&MacOS;</title>
+
+<para
+>Belirli &kappname; uygulamaları çeşitli <quote
+>geçişler(port)</quote
+> ile &MacOS; üzerine kurulabilir. Bazı &kde; uygulamalarının &MacOS; için kendi ürettiği ikili paketleri de vardır.</para>
+
+<para
+>Daha fazla bilgi için <ulink url="http://mac.kde.org/"
+>&kde; - &MacOS;X</ulink
+> adresine bakın.</para>
+
+</sect2>
+
+<sect2 id="install-bsd">
+<title
+>&BSD;</title>
+
+<para
+>&BSD; dağıtımlarının çoğu &kappname; uygulamalarını ve &plasma-workspaces;'nı bir bütün olarak kurmanızı sağlayacak <quote
+>geçiş(port)</quote
+> sistemi vardır.</para>
+
+<para
+>&BSD; sürümünün kurulumu için dağıtımınızın belgelendirmelerine bakın.</para>
+
+<!--FIXME: provide steps/links for common BSDs?-->
+
+</sect2>
+
+<sect2 id="install-mobile">
+<title
+>Taşınabilir Aygıtlar</title>
+
+<para
+>&plasma-active; ise akıllı telefonlar gibi mobil cihazlarda ve tabletlerde &kde; deneyimi sağlayan heyecanlandırıcı, yeni bir girişimdir. Farklı cihazlar için ikili (derlenmiş ve kullanım hazır) sürümleri bulunur.</para>
+
+<para
+>Daha fazla bilgi için <ulink url="http://plasma-active.org/"
+>&plasma-active;</ulink
+> adresine bakın.</para>
+
+</sect2>
+
+</sect1>
+
+<sect1 id="install-live">
+<title
+>Çalışan Ortam (Live Media)</title>
+
+<para
+>Bazı &Linux; ve &BSD; dağıtımları çalışan ortamlar (live media) sunar. Çalışan ortamlar ile sisteminize hiçbir şey kurmadan &plasma-workspaces;'nı denemenizi sağlar. Sadece bir CD takmak ya da USB sürücü bağlamak ve sistemi oradan başlatmak (boot etmek) yeterlidir. Eğer denerken gördüğünüz ortamı sevdiyseniz, aynı ortam (birçoğu) size bu yazılımı sabit diskinize kurma seçeneği de sunar.</para>
+
+<para
+>&kde;'nin web sitesindeki <ulink url="http://www.kde.org/download/distributions.php"
+>çalışan ortam üzerinde &kde; sunan dağıtımların listesini</ulink
+> bulabilirsiniz.</para>
+
+</sect1>
+
+<sect1 id="install-source">
+<title
+>Kaynak Kodları Kullanarak İnşa Etmek</title>
+
+<para
+>&kde; uygulamalarını nasıl derleyip kuracağınızı öğrenmek için <ulink url="http://techbase.kde.org/Getting_Started#Building_and_Running_KDE_Software_From_Source"
+> Building and Running &kde; Software From Source on &kde; TechBase</ulink
+> adresine bakın.</para>
+
+<para
+>&kde; <command
+>cmake</command
+> kullamaya başladığından beri artık derleme konusunda bir sorun yaşamamalısınız. Derleme sırasında bir sorun yaşarsanız, lütfen oluşan hataları &kde; e-posta listelerine bildirin.</para>
+
+</sect1>
+
+</chapter>
