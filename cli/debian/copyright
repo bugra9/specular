@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: bootableusb
-Source: https://github.com/bugra9/BootableUSB
+Upstream-Name: specular-cli
+Source: https://github.com/bugra9/specular
 
 Files: *
 Copyright: 2017 bugra9 <bugra9@gmail.com>
