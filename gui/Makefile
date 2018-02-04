@@ -6,7 +6,7 @@ OPT_DIR = /opt
 PROGRAM_DIR = ${OPT_DIR}/specular/gui
 
 make:
-	npm config set registry http://registry.npmjs.org/
+	sudo npm config set registry http://registry.npmjs.org/
 	npm install
 	npm run build
 makedir:
