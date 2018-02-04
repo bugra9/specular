@@ -8,7 +8,7 @@ Homepage: https://github.com/bugra9/specular
 #Vcs-Git: git://github.com/bugra9/specular.git
 #Vcs-Browser: https://github.com/bugra9/specular.git
 
-Package: specular-cli
+Package: specular-gui
 Architecture: all
 Depends: specular-cli
 Description: Create bootable usb drives
