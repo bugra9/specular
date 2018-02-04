@@ -6,8 +6,8 @@ OPT_DIR = /opt
 PROGRAM_DIR = ${OPT_DIR}/specular/gui
 
 make:
-	yarn install
-	yarn build
+	npm install
+	npm run build
 makedir:
 	test -d "$(DESTDIR)${PROGRAM_DIR}" || $(MKDIR) "$(DESTDIR)${PROGRAM_DIR}"
 	
