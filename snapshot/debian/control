@@ -10,6 +10,6 @@ Homepage: https://github.com/bugra9/specular
 
 Package: specular-cli
 Architecture: all
-Depends: 
+Depends: wget
 Description: Create bootable usb drives
  Specular allows you to create bootable USB drives for Windows and Linux distributions.
