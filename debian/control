@@ -2,7 +2,7 @@ Source: specular
 Section: utils
 Priority: optional
 Maintainer: bugra9 <bugra9@gmail.com>
-Build-Depends: debhelper (>=9), wget
+Build-Depends: debhelper (>=9), wget, npm
 Standards-Version: 3.9.8
 Homepage: https://github.com/bugra9/specular
 #Vcs-Git: git://github.com/bugra9/specular.git
