@@ -2,7 +2,7 @@ Source: specular-snapshot
 Section: utils
 Priority: optional
 Maintainer: bugra9 <bugra9@gmail.com>
-Build-Depends: debhelper (>=9)
+Build-Depends: debhelper (>=9), wget
 Standards-Version: 3.9.8
 Homepage: https://github.com/bugra9/specular
 #Vcs-Git: git://github.com/bugra9/specular.git
@@ -10,6 +10,6 @@ Homepage: https://github.com/bugra9/specular
 
 Package: specular-snapshot
 Architecture: all
-Depends: wget
+Depends:
 Description: Create bootable usb drives
  Specular allows you to create bootable USB drives for Windows and Linux distributions.
