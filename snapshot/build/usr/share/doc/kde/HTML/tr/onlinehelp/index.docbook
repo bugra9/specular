@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
+"dtd/kdex.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<article lang="&language;">
+<title
+>Çevrimiçi Yardım</title>
+<articleinfo>
+
+<date
+>2010-05-13</date>
+<releaseinfo
+>&kde; 4.5</releaseinfo>
+
+</articleinfo>
+
+<para
+>Bu sayfada, çevrimiçi yardım almanın yollarını ve KDE Topluluğu tarafından sağlanan ek bilgileri bulabilirsiniz.</para>
+
+<variablelist>
+<title
+>KDE UserBase</title>
+<varlistentry
+><term
+><ulink url="http://userbase.kde.org/An_introduction_to_KDE"
+>KDE'ye Giriş</ulink
+>&nbsp;</term>
+<listitem>
+<para
+><ulink url="http://userbase.kde.org/What_is_KDE"
+> KDE topluluğu ve Yazılımları</ulink
+> hakkında daha fazla bilgi alın. Size başlangıçta yardım edecek bilgilere ulaşın. Ayrıca, <ulink url="http://userbase.kde.org/Welcome_to_KDE_UserBase"
+> UserBase</ulink
+>'in ne olduğunu  ve size nasıl yardım edeceğini öğrenin. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><ulink url="http://userbase.kde.org/Getting_Help"
+>Yardım Almak</ulink
+>&nbsp;</term>
+<listitem>
+<para
+>Yardıma mı ihtiyacınız var? İşte, sorunlarınız ile ilgili yardım alabileceğiniz bazı yerler. Ayrıca daha kaliteli yanıtlar alabilmeniz için bazı ipuçları da var. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><ulink url="http://userbase.kde.org/Applications"
+>Uygulamalar</ulink
+>&nbsp;</term>
+<listitem>
+<para
+>KDE Topluluğu tarafından üretilmiş çok sayıda uygulamayı keşfedin. Gereksinimlerinize ve tercihlerinize en uygun uygulamayı bulun. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><ulink url="http://userbase.kde.org/Tutorials"
+>Nasıl Belgeleri</ulink
+>&nbsp;</term>
+<listitem>
+<para
+>Nasıl-yaparım Belgeleri, İpuçları &amp; Buradaki ipuçları KDE yazılımları ile yaşayacağınız deneyimleri daha hoş ve verimli hale getirebilir. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<variablelist>
+<title
+>KDE Forumları</title>
+<varlistentry
+><term
+><ulink url="http://forum.kde.org/"
+>KDE Topluluk Forumları</ulink
+>&nbsp;</term>
+<listitem>
+<para
+>KDE Forumları KDE ile ilgilenen kullanıcılar, geliştiriciler ve diğer insanların birbirlerine yardım edebileceği, KDE ile ilgili konuları tartışıp birbirlerine düşüncelerini aktarabileceği bir yer sunar.<ulink url="http://forum.kde.org/viewforum.php?f=14/"
+>Nasıl-belgelerini &amp; İpuçlarını</ulink
+> da bulabilirsiniz.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+>KDE Techbase</title>
+<varlistentry
+><term
+><ulink url="http://techbase.kde.org/"
+>KDE Techbase</ulink
+>&nbsp;</term>
+<listitem>
+<para
+>Geliştiriciler için bilgiler ve KDE geliştirme ortamı kurulumu ile ilgili yardım belgeleri.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<title
+>KDE Belgelendirmesi</title>
+<varlistentry
+><term
+><ulink url="http://docs.kde.org/"
+>KDE Belgelendirme sitesi</ulink
+>&nbsp;</term>
+<listitem>
+<para
+>Bu sayfa, KDE Kullanıcı Belgelendirmelerinin tamamını, KDE Yazılım Derlemesi'nin hem yayımlanmış sürümü hem de geliştirme sürümü için, 25'ten fazla dilde sunar.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

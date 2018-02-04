@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
+"dtd/kdex.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+	
+<article lang="&language;" id="http">
+<title
+>http / https</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+</articleinfo>
+
+<para
+><acronym
+>http</acronym
+> İngilizce <emphasis
+>H</emphasis
+>yper<emphasis
+>T</emphasis
+>ext <emphasis
+>T</emphasis
+>ransfer <emphasis
+>P</emphasis
+>rotocol sözcüklerinin akronimidir.</para>
+
+<para
+>Http kioslave (KDE girdi/çıktı yardımcısı) uygulaması tüm &kde; uygulamaları tarafından, http sunucularına (web sunucularına) yapılan bağlantıları idare etmek için kullanılır. En çok kullanıldığı yer ise web sayfalarını göstermek amacıyla kullanılan &konqueror; web tarayıcısıdır.</para>
+
+<para
+>Http kioslave uygulamasını &konqueror; içerisinde bir <acronym
+>URL (adres)</acronym
+> girerek kullanabilirsiniz. <userinput
+>http://<replaceable
+>www.kde.org</replaceable
+></userinput
+>.</para>
+
+<para
+>https ise http protokolünün bir SSL/TLS akışı içerisinde kapsüllenmiş halidir.</para>
+<para
+>SSL, Güvenli Soketler Katmanı protokolüdür. Bu bir güvenlik protokolü olup İnternet üzerinde iletişim gizliliği sağlar. Bu protokol, sunucu/istemci uygulamaları için gizli dinlemelerden korunarak, başkaları karışamadan, bir sahtekarlığa maruz kalmadan iletişim kurmayı sağlar. </para>
+<para
+>TLS ise Aktarım Katmanı Güvenliği (Transport Layer Security) anlamına gelir.</para>
+
+</article>

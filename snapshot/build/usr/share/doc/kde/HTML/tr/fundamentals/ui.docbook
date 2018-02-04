@@ -1,0 +1,883 @@
+<!--FIXME:
+        -visual dictionary
+        -general toolbar info
+        -basic keyboard shortcuts?
+-->
+
+<chapter id="ui">
+<title
+>Aradığınız Temel Şeyleri Bulmak</title>
+
+<!--FIXME: visual dictionary goes here-->
+
+<sect1 id="menus">
+<sect1info>
+<authorgroup>
+<author
+>&TC.Hollingsworth; &TC.Hollingsworth.mail;</author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+</sect1info>
+
+<title
+>Genel Menüler</title>
+
+<para
+>Birçok &kappname; uygulama bu menüleri içerir. Bununla birlikte, uygulamaların çoğunun burada sayılandan daha fazla menü girdisi vardır. Bazı uygulamalarda ise burada bahsedilen menü ögeleri yoktur.</para>
+
+<screenshot id="screenshot-menus">
+<screeninfo
+>Bir Menü Çubuğu</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="menus.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Bir menü çubuğu</phrase
+></textobject>
+<caption
+><para
+><ulink url="http://kde.org/applications/graphics/gwenview/"
+>&gwenview;</ulink
+> menü çubuğu. </para
+></caption>
+</mediaobject>
+</screenshot>
+
+<para
+>&dolphin; gibi bazı uygulamalar öntanımlı olarak bir menü çubuğunu göstermez. Menü çubuğunu <keycombo
+>&Ctrl;<keycap
+>M</keycap
+></keycombo
+> kısayolunu kullanarak görünür hale getirebilirsiniz. Ayrıca bu kısayolu eğer uygulama destekliyorsa menü çubuğunu gizlemek için de kullanabilirsiniz.</para>
+
+<sect2 id="menus-file">
+<title
+>Dosya Menüsü</title>
+<para
+><guimenu
+>Dosya</guimenu
+> menüsü, o anda açık olan dosya üzerinde işlemler yapmanızı ve uygulamanın temel işlevlerine erişmenizi sağlar.</para>
+
+<para
+>Genellikle içerilen menü ögeleri:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Dosya</guimenu
+><guimenuitem
+>Yeni</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Yeni bir dosya oluşturur. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dosya</guimenu
+><guimenuitem
+>Yeni Pencere</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Yeni bir pencere açar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Dosya</guimenu
+><guimenuitem
+>Aç</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Var olan bir dosyayı açar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Dosya</guimenu
+><guimenuitem
+>Kaydet</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyayı kaydeder. Eğer dosya varsa üzerine yazılır. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dosya</guimenu
+><guimenuitem
+>Farklı Kaydet</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyayı yeni bir isimle kaydeder. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dosya</guimenu
+><guimenuitem
+>Tümünü Kaydet</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Açık olan tüm dosyaları kaydeder. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Dosya</guimenu
+><guimenuitem
+>Yeniden Yükle</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Geçerli dosyayı yeniden yükler. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dosya</guimenu
+><guimenuitem
+>Tümünü Yeniden Yükle</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Açık olan tüm dosyaları yeniden yükler. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>P</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Dosya</guimenu
+><guimenuitem
+>Yazdır</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyayı yazdırır. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Dosya</guimenu
+><guimenuitem
+>Kapat</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Geçerli dosyayı kapatır. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dosya</guimenu
+><guimenuitem
+>Tümünü Kapat</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Açık olan tüm dosyaları kapatır. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Dosya</guimenu
+><guimenuitem
+>Çık</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Uygulamadan çıkar. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+
+<sect2 id="menus-edit">
+<title
+>Düzen Menüsü</title>
+<para
+><guimenu
+>Düzen</guimenu
+> menüsü, açık olan dosya üzerinde değişiklikler yapmanızı sağlar.</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Geri Al</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosya üzerinde yapılan son değişikliği geri alır. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Yinele</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosya üzerinde yapılan son değişikliği yineler. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>X</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Kes</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyanın o anda seçili olan kısmını siler ve panoya kopyalar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Kopyala</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyanın o anda seçili olan kısmını panoya kopyalar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>V</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Yapıştır</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Panodaki son ögeyi o anda imlecin olduğu konuma kopyalar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>A</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Tümünü Seç</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Açık olan dosyanın tüm içeriğini seçer. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Bul...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Açık olan dosyada metin aramanızı sağlar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>R</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Değiştir...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Açık olan dosyada metin aramanızı ve bulunan sonucu başka bir metin ile değiştirmenizi sağlar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F3</keycap
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Sonrakini Bul</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Arama işleminde eşleşen sonraki sonuca gider. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Shift;<keycap
+>F3</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Düzen</guimenu
+><guimenuitem
+>Öncekini Bul</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Arama işleminde eşleşen önceki sonuca gider. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+
+<sect2 id="menus-view">
+<title
+>Görünüm Menüsü</title>
+<para
+><guimenu
+>Görünüm</guimenu
+> menüsü, açık olan dosyanın ya da uygulamanın görünüm düzenini değiştirmenizi sağlar.</para>
+
+<para
+>Bu menünün, kullandığınız uygulamaya göre değişen farklı seçenekleri vardır.</para>
+</sect2>
+
+<sect2 id="menus-tools">
+<title
+>Araçlar Menüsü</title>
+<para
+><guimenu
+>Araçlar</guimenu
+> menüsü, açık olan dosya üzerinde belirli bir işlem yapmanızı sağlar.</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>O</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Araçlar</guimenu
+><guimenuitem
+>Otomatik Yazım Denetimi</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Yazdıklarınız üzerinde yazım denetimi yapın. Daha fazla bilgi için buraya <xref linkend="spellcheck-auto"/> bakın. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Araçlar</guimenu
+><guimenuitem
+>Yazım Denetimi...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Bu, yazım denetimi uygulamasını başlatır - bu uygulama kullanıcının yazım hatalarını yakalamasına ve düzeltmesine yardımcı olur. Daha fazla bilgi için buraya <xref linkend="spellcheck-check"/> bakın. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Araçlar</guimenu
+><guimenuitem
+>Yazım Denetimi (imleçten sonra)...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Bu, yazım denetimi uygulamasını başlatır ancak sadece imlecin bulunduğu konumdan belgenin sonuna kadar denetler. Daha fazla bilgi için buraya <xref linkend="spellcheck-check"/> bakın. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Araçlar</guimenu
+><guimenuitem
+>Seçimin Yazımını Denetle...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Bu, yazım denetimi uygulamasını başlatır ancak belge içerisinde sadece seçili metni denetler. Daha fazla bilgi için buraya <xref linkend="spellcheck-check"/> bakın. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Araçlar</guimenu
+><guimenuitem
+>Sözlüğü Değiştir</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Bu, yazım denetimi için kullanılacak sözlüğü değiştirmenizi sağalar. Daha fazla bilgi için buraya <xref linkend="spellcheck-config"/> bakın. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="menus-settings">
+<title
+>Ayarlar Menüsü</title>
+<para
+><guimenu
+>Ayarlar</guimenu
+> menüsü uygulamanızı özelleştirmenizi sağlar.</para>
+
+<para
+>Bu menü tipik olarak şu ögeleri içerir:</para>
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>M</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ayarlar</guimenu
+> <guimenuitem
+>Menü Çubuğunu Göster</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Menü çubuğunu gizler/gösterir.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ayarlar</guimenu
+><guisubmenu
+>Gösterilen Araç Çubukları</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Uygulama tarafından desteklenen çeşitli araç çubuklarını gösterip gizlemenizi sağlar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ayarlar</guimenu
+><guimenuitem
+>Kısayolları Yapılandır...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Kısayolları etkinleştirmenizi, pasifleştirmenizi ve düzenlemenizi sağlar. Daha fazla bilgi için buraya <xref linkend="shortcuts"/> bakın. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ayarlar</guimenu
+><guimenuitem
+>Araç Çubuklarını Yapılandır...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>İçeriği, düzeni, metni ve simgeleri özelleştirmenizi sağlar. Daha fazla bilgi için buraya <xref linkend="toolbars"/> bakın. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ayarlar</guimenu
+><guimenuitem
+>Uygulamayı <replaceable
+>Yapılandır</replaceable
+>...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Çalışan uygulama için yapılandırma panelini açar. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+
+<sect2 id="menus-help">
+<title
+>Yardım Menüsü</title>
+<para
+><guimenu
+>Yardım</guimenu
+> menüsü, uygulamanın belgelendirmelerine ve kullanışlı kaynaklara erişmenizi sağlar.</para>
+
+<!--taken from kdelibs.git/kdoctools/customization/en/entities/help-menu.docbook
+    and edited slightly to fit into buildingblocks-->
+<variablelist>
+<varlistentry>
+<term>
+<menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>F1</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Yardım</guimenu
+> <guimenuitem
+><replaceable
+>Uygulama</replaceable
+> El Kitabı</guimenuitem
+> </menuchoice>
+</term>
+<listitem
+><para
+><action
+>KDE Yardım sistemini başlatır,</action
+> başlatıldığında tetiklendiği uygulamanın el kitabını açar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Shift;<keycap
+>F1</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Yardım</guimenu
+> <guimenuitem
+>Bu Nedir?</guimenuitem
+> </menuchoice>
+</term>
+<listitem
+><para
+><action
+>Fare işaretçisini bir ok ve soru işaretinden oluşan yeni bir işarete dönüştürür.</action
+> Uygulama içerisindeki ögelere tıklamak, o ögenin işlevlerini açıklayan bir yardım penceresi açar (o öge için var ise).</para
+></listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Yardım</guimenu
+> <guimenuitem
+>Hata Bildir...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Hata bildirme penceresini açar,</action
+> buradan bir hata bildirebilir veya  özellik <quote
+>isteği</quote
+> yapabilirsiniz.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Yardım</guimenu
+> <guimenuitem
+>Uygulama Dilini Seç...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Bir pencere açar,</action
+> bu pencereden geçerli uygulama için <guilabel
+>Birincil dili</guilabel
+> ve <guilabel
+>Geri dönülecek dili</guilabel
+> seçebilirsiniz.</para
+></listitem>
+</varlistentry>
+<!--FIXME: which languages are available here? how is that determined?
+-->
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Yardım</guimenu
+> <guimenuitem
+>Uygulama <replaceable
+>Hakkında</replaceable
+></guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Bu, çalışan uygulamanın sürüm ve yazar bilgilerini gösterir.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Yardım</guimenu
+> <guimenuitem
+>KDE Hakkında</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>KDE sürümünü ve diğer bazı temel bilgileri gösterir.</action
+></para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2 id="menus-ack">
+<title
+>Teşekkürler ve Destek Olanlar</title>
+
+<para
+>Bu belgenin çoğunu yazan Anonim Google Code-In 2011 katılımcısına özellikle teşekkürler.</para>
+
+</sect2>
+
+</sect1>
+
+</chapter>

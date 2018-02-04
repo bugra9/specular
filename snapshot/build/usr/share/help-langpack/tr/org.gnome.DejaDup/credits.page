@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" its:version="1.0" type="topic" style="tip" id="credits" xml:lang="tr">
+<info>
+  <desc>Meet the team</desc>
+  <link type="guide" xref="index#about"/>
+</info>
+<title>Credits</title>
+
+<section id="development-credits">
+<title>Development</title>
+<list>
+<item its:translate="no"><p><link href="mailto:temposs@gmail.com">Andrew Fister</link></p></item>
+<item its:translate="no"><p><link href="mailto:mike@mterry.name">Michael Terry</link></p></item>
+<item its:translate="no"><p><link href="mailto:michael.vogt@ubuntu.com">Michael Vogt</link></p></item>
+<item its:translate="no"><p><link href="mailto:urban.skudnik@gmail.com">Urban Skudnik</link></p></item>
+<item its:translate="no"><p><link href="mailto:dev.lars@jegenhorst.de">Lars Jegenhorst</link></p></item>
+<item its:translate="no"><p><link href="http://www.canonical.com/">Canonical Ltd</link></p></item>
+</list>
+</section>
+
+<section id="documentation-credits">
+<title>Documentation</title>
+<list>
+<item its:translate="no"><p><link href="mailto:mike@mterry.name">Michael Terry</link></p></item>
+<item its:translate="no"><p><link href="http://www.canonical.com/">Canonical Ltd</link></p></item>
+</list>
+</section>
+
+<section id="art-credits">
+<title>Art</title>
+<list>
+<item its:translate="no"><p><link href="mailto:nisses.mail@home.se">Andreas Nilsson</link></p></item>
+<item its:translate="no"><p><link href="mailto:jimmac@novell.com">Jakub Steiner</link></p></item>
+<item its:translate="no"><p><link href="mailto:calamandrei@gmail.com">Lapo Calamandrei</link></p></item>
+<item its:translate="no"><p><link href="mailto:mike@mterry.name">Michael Terry</link></p></item>
+</list>
+</section>
+
+<section id="translation-credits">
+<title>Translation</title>
+<code>Launchpad Contributions:
+  Adem Caliskan https://launchpad.net/~adem.caliskan
+  Angel Spy https://launchpad.net/~dilara.ekinci
+  Cihan Ersoy https://launchpad.net/~cihan.ersoy
+  Michael Terry https://launchpad.net/~mterry
+  Samet Bas https://launchpad.net/~sametbas462
+  Translate it https://launchpad.net/~guglcimeil
+  Özgür AKGÜN https://launchpad.net/~ozgurak87</code>
+</section>
+
+</page>

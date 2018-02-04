@@ -1,0 +1,1832 @@
+<chapter id="tasks">
+<title
+>Genel Görevler</title>
+
+<sect1 id="nav">
+<sect1info>
+<authorgroup>
+<author
+>&TC.Hollingsworth; &TC.Hollingsworth.mail;</author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+</sect1info>
+<title
+>Belgelerde Gezinmek</title>
+<!-- FIXME
+Add auto scroll feature Konqueror with KHTML/Okular/more apps here?
+automatic scrolling with Shift+Down Arrow or Shift+Up Arrow
+-->
+<sect2 id="nav-scroll">
+<title
+>Kaydırma</title>
+
+<para
+>Büyük olasılıkla belgelerin sağ tarafında yer (bazen altında da olur) alan ve belge içerisinde gezinmeyi sağlayan kaydırma çubuğunu biliyorsunuzudur. Ancak bundan daha hızlı ve daha kolay bir şekilde belge içerisinde gezinmenin başka yolları da var.</para>
+
+<para
+>Bazı farelerin ortasında bir tekerlek vardır. Bu tekerleği ileri geri hareket ettirerek belge içerisinde gezinebilirsiniz. Bu gezinme sırasında &Shift; tuşuna basılı tutarsanız kaydırma işlemi daha da hızlanacaktır.</para>
+
+<para
+>Bir dizüstü bilgisayar kullanıyorsanız, dokunmatik alanı (touchpad) kullanarak da kaydırma yapabilirsiniz. Bazı bilgisayarlar bu alanın sağ tarafındaki dikey kısımda ve alt tarafındaki yatay kısımda parmağınızı aşağı yukarı, sağa sola hareket ettirerek kaydırma yapmanıza izin verir. Bazı billgisayarlar da iki parmağınızla kaydırma yapmanızı sağlar: İki parmağınızı da dokunma alanının herhangi bir yerinde yukarı aşağı hareket ettirirseniz dikey kaydırma yaparsınız, sağa sola hareket ettirirseniz yatay kaydırma yaparsınız. Bu işlev, yukarıda anlatılan fare tekerini taklit ettiğinden &Shift; tuşuna basarsanız yine gezinmeniz hızlanır.</para>
+
+<para
+>Eğer &plasma-workspaces; kullanıyorsanız, fare tekerinin davranışını <ulink url="help:/kcontrol/mouse/"
+>&systemsettings; içerisindeki Fare modülünden</ulink
+> kontrol edebilirsiniz. Ayrıca dokunamtik alanın kaydırma davranışını da &systemsettings; içerisindeki Touchpad modülünden ayarlayabilirsiniz. Eğer Plasma Çalışma Alanlarından birini kullanmıyorsanız &OS;nizin ya da kullandığınız masaüstü ortamının yapılandırma alanına bakın.</para>
+
+<para
+>Bunlara ek olarak kaydırma çubuğunun sağ tıklama menüsü de bazı seçenekler içerir. Kaydırma çubuğunun herhangi bir yerine sağ tıklarsanız şu seçeneklere erişirsiniz:</para>
+
+<variablelist>
+
+<varlistentry id="nav-scroll-here">
+<term
+><guimenuitem
+>Buraya kaydır</guimenuitem
+></term>
+<listitem
+><para
+>Doğrudan sağ tıkladığınız yerin temsil ettiği konuma kaydırır. Kaydırma çubuğuna farenin sol tuşu ile tıkladığınızda yapılan kaydırma ile aynı işevi görür.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="nav-scroll-top">
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Home</keycap
+></keycombo
+></shortcut
+> <guimenuitem
+>Başlangıç</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Belgenin başlangıcına git.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="nav-scroll-bottom">
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>End</keycap
+></keycombo
+></shortcut
+> <guimenuitem
+>Son</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Belgenin sonuna git.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="nav-scroll-page-up">
+<term
+><menuchoice
+><shortcut
+><keycap
+>PgUp</keycap
+></shortcut
+> <guimenuitem
+>Sayfa yukarıya</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Belge yazdırıldığında önceki sayfa olacak sayfaya ya da diğer belge tiplerinde ekranda o anda görünmeyen önceki bölüme gider.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="nav-scroll-page-down">
+<term
+><menuchoice
+><shortcut
+><keycap
+>PgDown</keycap
+></shortcut
+> <guimenuitem
+>Sayfa aşağıya</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Belge yazdırıldığında sonraki sayfa olacak sayfaya ya da diğer belge tiplerinde ekranda o anda görünmeyen sonraki bölüme gider. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="nav-scroll-up">
+<term
+><guilabel
+>Yukarıya kaydır</guilabel
+></term>
+<listitem
+><para
+>Belgeyi bir birim (genellikle bir satır) kaydırır. Kaydırma çubuğunun en tepesindeki ok işaretine bir kez tıklamakla aynı işleve sahiptir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry id="nav-scroll-down">
+<term
+><guilabel
+>Aşağıya kaydır</guilabel
+></term>
+<listitem
+><para
+>Belgeyi bir birim (genellikle bir satır) kaydırır. Kaydırma çubuğunun en altındaki ok işaretine bir kez tıklamakla aynı işleve sahiptir.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="nav-zoom">
+<title
+>Büyütme</title>
+
+<para
+>Bir çok uygulama büyütme işlevine sahiptir. Bu işlev, o anda görüntülenen metni ya da resmi büyütüp küçültmenize izin verir. Büyütme işlevi genellikle <link linkend="menus-view"
+>Görünüm menüsünde</link
+>, bazı uygulamalarda ise durum çubuğunda  bulunur.</para>
+
+<para
+>Klavyenizi kullanarak da <keycombo action="simul"
+>&Ctrl;<keycap
+>+</keycap
+></keycombo
+> büyütme <keycombo action="simul"
+>&Ctrl;<keycap
+>-</keycap
+></keycombo
+> küçültme işlemlerini yapabilirsiniz. <xref linkend="nav-scroll"/> bölümünde anlatıldığı gibi fareyle ya da dokunmatik alan (touchpad) ile kaydırma yaparken de &Ctrl; tuşuna basılı tutarak büyütme küçültme işlemini yapabilirsiniz.</para>
+
+</sect2>
+
+</sect1>
+
+
+<sect1 id="files">
+<sect1info>
+<authorgroup>
+<author
+>&TC.Hollingsworth; &TC.Hollingsworth.mail;</author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+</sect1info>
+<title
+>Dosyaları Açmak ve Kaydetmek</title>
+
+<sect2 id="files-intro">
+<title
+>Giriş</title>
+
+<para
+>Birçok &kappname; uygulaması dosyalarla çalışır. Uygulamaların çoğunda dosyaları açmak ve kaydetmek için bir <guimenu
+>Dosya</guimenu
+> menüsü vardır. Daha fazla bilgi için <xref linkend="menus-file"/> bölümüne bakın. Ayrıca bir dosya seçemeyi gerektiren başka bir çok işlem vardır. İstisnalar hariç tüm &kappname; uygulamaları genel olarak aynı dosya seçme penceresini kullanır.</para>
+
+<screenshot id="screenshot-files-open">
+<screeninfo
+>Dosya Açma Penceresi</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="files-open.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Dosya açma penceresi.</phrase
+></textobject>
+<caption
+><para
+><ulink url="http://kde.org/applications/internet/konqueror/"
+>&konqueror;</ulink
+> içerisinde bir dosya açmak. </para
+></caption>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="files-ui">
+<title
+>Dosya Seçme Penceresi</title>
+
+<!--large portions of this section were taken from the "Filesystem Browser"
+    section of kate/plugins.docbook (kde-baseapps/kate_plugins.po)           -->
+
+<variablelist>
+
+<varlistentry id="files-ui-toolbar">
+<term
+>Araç Çubuğu</term>
+<listitem>
+<para
+>Bu, standart gezinme aracı düğmelerini içerir:</para>
+
+<variablelist>
+<varlistentry id="files-ui-toolbar-back">
+<term
+><guibutton
+>Geri</guibutton
+></term>
+<listitem
+><para
+>Dizin görünümünün geçmişinde daha önce görüntülenen dizine gitmeyi sağlar. Geçmişte bir önceki öge yoksa bu düğme pasifleştirilir. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-forward">
+<term
+><guibutton
+>İleri</guibutton
+></term>
+<listitem
+><para
+>Dizin görünümünün geçmişinde daha önce görüntülenen sonraki dizine gitmeyi sağlar. Geçmişte bir sonraki öge yoksa bu düğme pasifleştirilir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-parent">
+<term
+><guibutton
+>Üst Dizin</guibutton
+></term>
+<listitem
+><para
+>Eğer mümkünse, dizin görünümünde o anda görüntülenen dizinin bir üst dizinine gitmeyi sağlar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-reload">
+<term
+><guibutton
+>Yeniden Yükle</guibutton
+> (<keycap
+>F5</keycap
+>)</term>
+<listitem
+><para
+>Dizin görünümünü yeniden yükler. Dizinin ilk yüklenmesinden sonra ya da daha sonraki yeniden yüklemeden sonra dizinde yapılan değişiklikleri görüntülemek için kullanılır.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-show-preview">
+<term
+><guibutton
+>Önizlemeyi Göster</guibutton
+></term>
+<listitem
+><para
+>Dizin görünümü içerisindeki tüm dosyaların önizlemesini gösterir. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-zoom">
+<term
+>Boyutlandırma Kaydırma Çubuğu</term>
+<listitem
+><para
+>Dizin görünümü içerisindeki simge önzilemelerinin boyutunu değiştirmenizi sağlar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options">
+<term
+><guibutton
+>Seçenekler</guibutton
+></term>
+<listitem>
+<variablelist>
+
+<varlistentry id="files-ui-toolbar-options-sorting">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Sıralama</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<variablelist>
+
+<varlistentry id="files-ui-toolbar-options-sorting-name">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Sıralama</guisubmenu
+> <guimenuitem
+>İsme Göre</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyaları, dizin görünümünde alfabetik olarak sırala. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-sorting-size">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Sıralama</guisubmenu
+> <guimenuitem
+>Boyuta Göre</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyaları, dizin görünümünde boyutlarına göre sırala.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-sorting-date">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Sıralama</guisubmenu
+> <guimenuitem
+>Tarihe Göre</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyaları, dizin görünümünde son değiştirilme tarihine göre sırala. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-sorting-type">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Sıralama</guisubmenu
+> <guimenuitem
+>Tipe Göre</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyaları, dizin görünümünde tiplerine göre alfabetik olarak sırala.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-sorting-descending">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Sıralama</guisubmenu
+> <guimenuitem
+>Azalan</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>İşaretlenmediğinde (öntanımlı olarak işaretli değildir), dizin görünümündeki dosyalar artan şekilde sıralanır. (Örneğin, dosyalar alfabetik olarak A'dan Z'ye, sayısal olarak da küçükten büyüğe doğru sıralanır.) İşaretlendiğinde ise, dizin azalan şekilde sıralanır (öncekinin tersine).</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-sorting-folders-first">
+<term
+><menuchoice
+><guimenu
+>Options</guimenu
+><guisubmenu
+>Sorting</guisubmenu
+> <guimenuitem
+>Önce Dizinler</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Etkinleştirildiğinde (öntanımlı), dizinler normal dosyalardan önce gösterilir.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-view">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Görünüm</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<variablelist>
+
+<varlistentry id="files-ui-toolbar-options-view-short">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Görünüm</guisubmenu
+> <guimenuitem
+>Kısa Görünüm</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Sadece dosya isimlerini gösterir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-view-detailed">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Görünüm</guisubmenu
+> <guimenuitem
+>Ayrıntılı Görünüm</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dosyaya ait <guilabel
+>İsim</guilabel
+>, <guilabel
+>Tarih</guilabel
+>, <guilabel
+>Boyut</guilabel
+> ve <guilabel
+>Tip</guilabel
+> bilgilerini gösterir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-view-tree">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Görünüm</guisubmenu
+> <guimenuitem
+>Ağaç Görünümü</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Kısa Görünüm gibidir ama dizinler içeriklerini gösterecek şekilde genişletilebilir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-view-detailed-tree">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guisubmenu
+>Görünüm</guisubmenu
+> <guimenuitem
+>Ayrıntılı Ağaç Görünümü</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Bu, aynı zamanda dizinlerin genişletilmesini sağlar, ancak, Ayrıntılı Görünümde kullanılabilir olan ek sütunları da gösterir.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-hidden">
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Alt;<keycap
+>.</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Seçenekler</guimenu
+><guimenuitem
+>Gizli Dosyaları Göster</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Normalde işletim sisteminiz tarafından gizlenmiş olan dosya ve dizinleri gösterir. Alternatif olarak  <keycap
+>F8</keycap
+> kısayolunu da kullanabilirsiniz. </para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-show-places">
+<term
+><menuchoice
+><shortcut
+><keycap
+>F9</keycap
+></shortcut
+> <guimenu
+>Seçenekler</guimenu
+><guimenuitem
+>Konumlar Gezinme Panelini Göster</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Yer imlerine eklenen konumlara, disklere ve diğer ortamlara kolayca erişmenizi sağlayan konumlar panelini gösterir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-show-bookmarks">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guimenuitem
+>Yer İmlerini Göster</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Araç çubuğunda, <quote
+>yer imlerine</quote
+>, kaydedilmiş konumların bir listesidir, erişmeniz için bir ek simge gösterir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-options-show-preview">
+<term
+><menuchoice
+><guimenu
+>Seçenekler</guimenu
+><guimenuitem
+>Yan Önizlemeyi Göster</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>O anda vurgulanan dosyanın önizlemesini, dizin görünümünün sağ tarafında gösterir.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-toolbar-bookmarks">
+<term
+><guibutton
+>Yer İmleri</guibutton
+></term>
+<listitem
+><para
+>Yer imlerini düzenlemeniz, yer imi ve yeni yer imi dizini eklemeniz için bir alt menü açar.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</listitem>
+</varlistentry>
+
+<!--adapted from dolphin documentation-->
+<varlistentry id="files-ui-location">
+<term
+>Konum Çubuğu</term>
+<listitem>
+<para
+>Konum çubuğu, dizin görünümünün en tepesinde bulunur ve geçerli dizinin yolunu gösterir. Konum çubuğunun iki kipi vardır:</para>
+
+<variablelist>
+<varlistentry id="files-ui-location-breadcrumb">
+<term
+>Kırıntı Kipi</term>
+<listitem>
+<para
+>Öntanımlı olarak gelen <quote
+>Kırıntı</quote
+> kipinde, geçerli dizine kadar adres yolunda bulunan her dizin adı o dizini kolayca açmayı sağlayan bir düğmedir. Dahası, her düğmenin sağ tarafında bulunan <quote
+>&gt;</quote
+> işaretine tıklarsanız, o dizin içerisinde bulunan alt dizinleri listeleyen bir menü açar. </para>
+
+<screenshot id="screenshot-files-locationbar-breadcrumb">
+<screeninfo
+>Kırıntı kipindeki konum çubuğunun ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="files-locationbar-breadcrumb.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Kırıntı kipindeki konum çubuğunun ekran görüntüsü.</phrase>
+</textobject>
+<caption
+><para
+>Kırıntı kipindeki konum çubuğunun ekran görüntüsü.</para
+></caption>
+</mediaobject>
+</screenshot>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-location-editable">
+<term
+>Düzenlenebilir Kip</term>
+<listitem>
+<para
+>Kırıntı kipindeyken, yolun sağ tarafındaki gri alana &LMB; ile tıklamak, konum çubuğunu  <quote
+>düzenlenebilir</quote
+> kipe geçirir. Artık yolu klavye kullanarak düzenleyebilirsiniz. Tekrar kırıntı kipine geçmek isterseniz konum çubuğunun en sağındaki işaretleme simgesine &LMB; ile tıklayın. </para>
+
+<screenshot>
+<screeninfo
+>Konum çubuğunun düzenlenebilir halinin ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="files-locationbar-editable.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Konum çubuğunun düzenlenebilir hali.</phrase>
+</textobject>
+<caption
+><para
+>Konum çubuğunun düzenlenebilir hali.</para
+></caption>
+</mediaobject>
+</screenshot>
+
+</listitem>
+</varlistentry>
+
+<!--currently in dolphin only, should be added to 4.9 file dialog
+<varlistentry id="files-ui-location-context">
+<term
+>Places</term>
+
+<listitem>
+<para
+>If the <guilabel
+>Places</guilabel
+> panel is hidden; in both modes an
+additional icon in front of the path is displayed. This icon can be clicked with
+the &LMB; to open a menu which offers quick access to <quote
+>places</quote
+> and
+storage media. See the <link linkend="files-ui-places"
+>section about the Places
+Panel</link
+> for details.</para>
+
+<screenshot id="screenshot-files-locationbar-places-icon">
+<screeninfo
+>Location bar with Places icon</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="files-locationbar-places-icon.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Location bar with Places icon</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+</listitem>
+</varlistentry
+>-->
+
+</variablelist>
+
+<para
+>Konum çubuğunun sağ tıklama menüsü, kipler arasında geçiş yapmanızı ve panodaki adresi yapıştırmanızı sağlar. Sağ tıklama menüsündeki son seçenek olan Tam Yolu Göster'i seçerseniz kök dizinden başlayarak geçerli dizine kadar olan yolun tamamı gösterilir. Eğer bu seçenek işaretlenmezse sadece geçerli dizin ve gidilen sonraki dizinlerin adı gösterilir. </para>
+
+<screenshot id="screenshot-files-locationbar-context-menu">
+<screeninfo
+>Konum çubuğu sağ tıklama menüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="files-locationbar-context-menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Konum çubuğu sağ tıklama menüsü</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-places">
+<term
+><guilabel
+>Konumlar</guilabel
+> Listesi</term>
+<listitem
+><para
+>&dolphin; ve diğer dosya yönetimi araçlarıyla paylaşılan, &kde;'nin standart Konumlar listesini gösterir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-folder-view">
+<term
+>Dizin Görünümü</term>
+<listitem>
+<para
+>Seçim penceresinin en büyük kısmı geçerli dizindeki tüm ögeleri listeleyen alandır. Bir dosyayı seçmek için üzerine çift tıklayabilir ya da ögeyi seçerek <guibutton
+>Aç</guibutton
+> ya da <guibutton
+>Kaydet</guibutton
+> düğmesine tıklayabilirsiniz.</para>
+
+<para
+>Ayrıca, bir defada birden fazla dosya seçebilirsiniz. Belirli dosyaları seçmek ya da zaten seçili olan dosyaların seçimini kaldırmak için &Ctrl; tuşuna basılı tutarak dosyalara tıklayın. Bir grup dosyada sürekli bir seçim yapmak için ilk dosyaya tıklayın ve &Shift; tuşunu basılı tutarken seçmek istediğiniz son dosyaya tıklayın ve &Shift; tuşunu bırakın.</para>
+
+<para
+>Dizin Görünümü sınırlı sayıda dosya işlemini destekler. Bu işlemlere, bir dosyaya sağ tıklayarak açılan menüden ya da klavye kısayolları ile erişilebilir. Sağ tıklama menüsünde aşağıdaki ögeler vardır:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guimenuitem
+>Yeni Oluştur...</guimenuitem
+></term>
+<listitem
+><para
+>Yeni bir dosya veya dizin oluştur.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Çöp Kutusuna Taşı...</guimenuitem
+> (<keycombo action="simul"
+><keycap
+>Del</keycap
+></keycombo
+>)</term>
+<listitem
+><para
+>Seçili ögeyi çöp kutusuna taşı.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guisubmenu
+>Sıralama</guisubmenu
+></term>
+<listitem
+><para
+>Bu alt menüye burada <xref linkend="files-ui-toolbar-options-sorting"/> anlatıldığı gibi araç çubuğundan da ulaşılabilir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guisubmenu
+>Görünüm</guisubmenu
+></term>
+<listitem
+><para
+>Bu alt menüye burada <xref linkend="files-ui-toolbar-options-view"/> anlatıldığı gibi araç çubuğundan da ulaşılabilir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Dosya Yöneticisini Aç</guimenuitem
+></term>
+<listitem
+><para
+>Geçerli dizini öntanımlı dosya yöneticiniz ile açar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Özellikler</guimenuitem
+> (<keycombo action="simul"
+>&Alt;&Enter;</keycombo
+>)</term>
+<listitem
+><para
+>Seçili dosyaya ilişkin çeşitli üst-verileri görüntüleyip değiştirebileceğiniz Özellikler penceresini açar.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-preview">
+<term
+>Önizleme Paneli</term>
+<listitem
+><para
+>Etkinleştirilirse, o anda vurgulanan dosyanın bir önizlemesini açar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-name">
+<term
+><guilabel
+>İsim</guilabel
+> Girişi</term>
+<listitem
+><para
+>Bir dosya seçildiğinde, bu metin kutusunda bir isim görünür. Ayrıca, bu kutuya elle bir dosya adı ya da yol girebilirsiniz.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-filter">
+<term
+><guilabel
+>Filtre</guilabel
+> Girişi</term>
+<listitem>
+<para
+>Bir dosya açılırken, dizin görünümündeki bulunan dosyaları filtrelemek için bir <guilabel
+>Filtre</guilabel
+> girişi vardır. Filtre standart parçaları kullanır, desenler boşluk bırakılarak ayrılmalıdır. Örneğin, <userinput
+>*.cpp *.h *.moc</userinput
+> girerek çeşitli &Qt; programlama dosyalarını görüntüleyebilirsiniz.</para>
+
+<para
+>Tüm dosyaları göstermek için bir yalnıca bir * kullanın (<userinput
+>*</userinput
+>).</para>
+
+<para
+>Filtre oturumlardaki son 10 girdiyi kaydeder. Kaydedilenlerden birini kullanmak için, girişin sağındaki ok düğmesine basın ve istediğiniz filtreyi seçin. Filtreyi otomatik tamamlama okunun solundaki <guibutton
+>Metni temizle</guibutton
+> düğmesine basarak pasifleştirebilirsiniz.</para>
+
+<para
+>Bir dosyayı kaydederken, <guilabel
+>Filtre</guilabel
+> girişi, aşağı açılabilir bir menü olarak uygulamanın desteklediği biçimleri gösterir. Bu menüden bir öge seçerek dosyayı o biçimde kaydedebilirsiniz.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-autoselect-extension">
+<term
+><guilabel
+>Dosya adı uzantısını otomatik olarak seç</guilabel
+></term>
+<listitem
+><para
+>Bir dosyayı kaydederken bu işaretleme kutusu görüntülenir. Seçildiğinde (öntanımlı olarak seçilidir), uygulama dosya için öntanımlı olan dosya uzantısını (eğer <guilabel
+>İsim</guilabel
+> satırında yoksa) dosyanın adına otomatik olarak ekleyecektir. Kullanılacak dosya uzantısı, işaretleme kutusunun sonunda, parantez içerisinde listelenir. </para>
+
+<screenshot id="screenshot-files-save">
+<screeninfo
+>Dosya Kaydetme Penceresi</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="files-save.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Dosya kaydetme penceresi.</phrase
+></textobject>
+<caption
+><para
+><ulink url="http://kde.org/applications/internet/konqueror/"
+>&konqueror;</ulink
+> içerisinde bir dosyayı kaydetmek. </para
+></caption>
+</mediaobject>
+</screenshot>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-open-save">
+<term
+><guibutton
+>Aç</guibutton
+> ve <guibutton
+>Kaydet</guibutton
+> Düğmesi</term>
+<listitem
+><para
+>Yapılan işleme göre <guibutton
+>Aç</guibutton
+> veya <guibutton
+>Kaydet</guibutton
+> düğmesi gösterilir. Bu düğmeye tıklamak dosya seçme penceresini kapatır ve istenilen işlemi yapar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry id="files-ui-cancel">
+<term
+><guibutton
+>İptal</guibutton
+> Düğmesi</term>
+<listitem
+><para
+><guibutton
+>İptal</guibutton
+> düğmesine basmak, herhangi bir işlem yapmadan dosya penceresini kapatır.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="files-ack">
+<title
+>Teşekkürler ve Destek Olanlar</title>
+
+<para
+>Bu belgenin çoğunu yazan Anonim Google Code-In 2011 katılımcısına özellikle teşekkürler.</para>
+
+</sect2>
+
+</sect1>
+
+
+<sect1 id="spellcheck">
+<sect1info>
+<authorgroup>
+<author
+>&David.Sweet; &David.Sweet.mail;</author>
+<author
+><firstname
+>Salma</firstname
+> <surname
+>Sultana</surname
+></author>
+<author
+>&TC.Hollingsworth; &TC.Hollingsworth.mail;</author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+</sect1info>
+<title
+>Yazım Denetimi</title>
+
+<para
+>&sonnet; &kate;, &kmail;, &kword; gibi &kde; uygulamaları tarafından kullanılan bir yazım denetleyicisidir. Birçok özgür yazım denetleyicisi için bir &GUI; ön ucudur.</para>
+
+<para
+>&sonnet;'i kullanmak için  <application
+>&GNU; Aspell</application
+>, <application
+>Enchant</application
+>, <application
+>Hspell</application
+>, <application
+>ISpell</application
+> veya <application
+>Hunspell</application
+> gibi bir yazım denetleyiciye ve kullanmak istediğiniz dile göre gerekli sözlüklere gereksinim duyulur.</para>
+
+<sect2 id="spellcheck-check">
+<title
+>Yazım Denetimi</title>
+
+<screenshot id="screenshot-spellcheck-check">
+<screeninfo
+>Yazım Denetimi Penceresi</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="spellcheck-check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Yazım denetimi penceresi.</phrase>
+</textobject>
+<caption
+><para
+>Hatalı bir yazımı düzeltmek.</para
+></caption>
+</mediaobject>
+</screenshot>
+
+<para
+>Yazım denetimi için <menuchoice
+><guimenu
+>Araçlar</guimenu
+> <guimenuitem
+>Yazım Denetimi</guimenuitem
+></menuchoice
+> menüsüne gidin.</para>
+
+<para
+>Belgenizde bir sözcüğü yanlış yazmışsanız, pencerenin en üst satırında gösterilir. &sonnet; değiştirmeniz için doğru sözcüğü/sözcükleri bulmayı dener. En iyi öneri  <guilabel
+>Bununla değiştir</guilabel
+> ögesinin sağ tarafında bulunur. Bu değiştirme işlemini kabul etmek için  <guibutton
+>Değiştir</guibutton
+> düğmesine tıklayın.</para>
+
+<para
+>&sonnet;, öneriler listesinden bir sözcük seçerek hatalı yazılan sözcüğü değiştirmenize de izin verir. <guibutton
+>Öner</guibutton
+> düğmesinin yardımıyla, öneriler listesine sözlükten daha fazla sözcük ekleyebilirsiniz.</para>
+
+<para
+>Yazım şeklinizin aslını korumak için <guibutton
+>Yoksay</guibutton
+> düğmesine tıklayın.</para>
+
+<para
+><guibutton
+>Tamamlandı</guibutton
+> düğmesine tıklayarak yazım denetimini durdurabilir ve yapılan değişiklikleri <emphasis
+>koruyabilirsiniz</emphasis
+>.</para>
+
+<para
+><guibutton
+>İptal</guibutton
+> düğmesine tıklayarak yazım denetimini durdurabilir ve yapılan değişiklikleri <emphasis
+>iptal</emphasis
+> edebilirsiniz.</para>
+
+<para
+>Değiştirme işlemi için seçilen sözcükleri kullanarak hatalı yazılan tüm sözcükleri, belgenin devamında da hatalı yazım tekrar ediyorsa, değiştirmek için <guibutton
+>Tümünü Değiştir</guibutton
+> düğmesine tıklayın.</para>
+
+<para
+><guibutton
+>Tümünü Yoksay</guibutton
+> düğmesine tıklayarak o noktadaki yazım hatasını yoksayabilirsiniz, aynı hatalı yazım belgenin devamında da yoksayılacaktır.</para>
+
+<para
+><guibutton
+>Sözlüğe Ekle</guibutton
+> düğmesine tıklayarak hatalı yazım olarak gösterilen sözcüğü kişisel sözlüğünüze ekleyebilirsiniz.</para>
+
+<para
+><guilabel
+>Kişisel Sözlük</guilabel
+> sistem sözlüğünden ayrı bir sözlüktür ve sizin tarafınızdan yapılan eklemeler diğer kullanıcılar tarafından görülemez.</para>
+
+<para
+>Bu pencerenin en altındaki <guilabel
+>Dil</guilabel
+> kutucuğu, geçici olarak başka bir dil seçmenizi sağlar.</para>
+
+</sect2>
+
+<sect2 id="spellcheck-auto">
+<title
+>Otomatik Yazım Denetimi</title>
+
+<!--FIXME:screenshot-->
+
+<para
+>Birçok uygulamada yazdığınız anda otomatik olarak yazım denetimi yapabilirsiniz. Bu özelliği etkinleştirmek için <menuchoice
+><guimenu
+>Araçlar</guimenu
+> <guimenuitem
+>Otomatik Yazım Denetimi</guimenuitem
+></menuchoice
+> ögesini seçin.</para>
+
+<para
+>Yanlış yazılmış olma olasılığı olan sözcüklerin kırmızı ile altı çizilir. Bir öneriyi seçmek için altı çizili olan sözcüğe sağ tıklayın, <guisubmenu
+>Yazım Denetimi</guisubmenu
+> alt menüsünü ve ardından öneriyi seçin. Ayrıca bu belge için bu sözcüğü hatalı olarak değerlendirmemesi için <guimenuitem
+>Sözcüğü Yoksay</guimenuitem
+> düğmesine tıklayarak &sonnet;'i bilgilendirebilirsiniz ya da <guimenuitem
+>Sözlüğe Ekle</guimenuitem
+> menü ögesine tıklayarak kişisel sözlüğünüze ekleyebilirsiniz.</para>
+
+</sect2>
+
+<sect2 id="spellcheck-config">
+<title
+>&sonnet; Yapılandırması</title>
+
+<para
+>Sözlüğünüzü değiştirmek için, menüde <menuchoice
+><guimenu
+>Araçlar</guimenu
+> <guimenuitem
+>Sözlüğü Değiştir</guimenuitem
+></menuchoice
+> yolunu takip edebilirsniz. Sözlüğü değiştirebilmeniz için belgenin en altında küçük bir pencere açılır.</para>
+
+<!--FIXME: maybe move kcm handbook here too?-->
+<para
+>&sonnet;'i yapılandırma konusunda daha fazla bilgi için &systemsettings; içerisindeki <ulink url="help:kcontrol/spellchecking"
+>Yazım Denetimi bilgilerine</ulink
+> bakabilirsiniz</para>
+
+</sect2>
+
+<sect2 id="spellcheck-ack">
+<title
+>Teşekkürler ve Destek Olanlar</title>
+
+<para
+>Bu belgenin çoğunu yazan Anonim Google Code-In 2011 katılımcısına özellikle teşekkürler.</para>
+
+</sect2>
+
+</sect1>
+
+
+<sect1 id="find">
+<sect1info>
+<authorgroup>
+<author
+>&TC.Hollingsworth; &TC.Hollingsworth.mail;</author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+</sect1info>
+<title
+>Bul ve Değiştir İşlevi</title>
+
+<!--FIXME
+different visual appearance, lot of common options for all Find/Search bars or windows
+Find window used in KMail Composer, where else?
+Search bar used e.g. in Konsole/Konqueror Views (readonly)
+Search+Replace bar in Kate/KWrite
+  -->
+<para
+>Birçok &kappname; uygulaması bir belge içerisinde belirli bir metni bulmanıza izin verir. Değiştir işlevi ise, bulunan metni istediğiniz bir metin ile değiştirmenizi sağlar.</para>
+
+<para
+>Bu iki işlevi de &kde; uygulamalarının çoğunda <guimenu
+>Düzen</guimenu
+> menüsünde bulabilirsiniz. Bu menü hakkında daha fazla bilgi için  <xref linkend="menus-edit"/> bölümüne bakın.</para>
+
+<sect2 id="find-find">
+<title
+>Arama İşlevi</title>
+
+<para
+>Bul işlevi, belge içerisinde metin arar ve bulunan sonucu seçer.</para>
+
+<screenshot id="screenshot-find-find">
+<screeninfo
+>Arama Penceresi</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="find-find.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Arama penceresi.</phrase
+></textobject>
+<caption
+><para
+><ulink url="http://kde.org/applications/internet/kmail/"
+>&kmail;</ulink
+> içerisinde <userinput
+>yazılım</userinput
+> aranıyor. </para
+></caption>
+</mediaobject>
+</screenshot>
+
+<para
+>Bul işlevini kullanmak için <menuchoice
+><guimenu
+>Düzen</guimenu
+> <guimenuitem
+>Bul</guimenuitem
+></menuchoice
+> menüsünü ya da <keycombo action="simul"
+>&Ctrl;<keycap
+>F</keycap
+></keycombo
+> klavye kısayolunu kullanabilirsiniz. Ardından, <guilabel
+>Aranacak Metin:</guilabel
+> metin kutusuna bulmak istediğiniz metni girin.</para>
+
+<para
+>Eğer <guilabel
+>Düzenli ifade</guilabel
+> işaretlenmişse, düzenli ifadeleri kullanarak arama yapabilirsiniz. <guibutton
+>Düzenle</guibutton
+> düğmesine tıklayarak sık kullanılan <guilabel
+>Beyaz Alan</guilabel
+> veya <guilabel
+>Satır Başı</guilabel
+> gibi düzenli ifade karakterlerini seçip, girebilirsiniz. Sisteminizde &kate; kurulu ise, düzenli ifadeleri yazma konusunda daha fazla bilgiyi <ulink url="help:/kate/regular-expressions.html"
+> bölümünde</ulink
+> bulabilirsiniz.</para>
+
+
+<para
+>Bu seçenekleri yapılandırarak arama sonuçlarını sınırlandırabilirsiniz:</para>
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Büyük küçük harf duyarlı</guilabel
+></term>
+<listitem
+><para
+>Büyük küçük harfler farklı değerlendirilir. Örneğin, <quote
+>Bu</quote
+> sözcüğünü ararken <quote
+>bu</quote
+> sonucu bulunamaz.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Sadece tam sözcükler</guilabel
+></term>
+<listitem
+><para
+>Öntanımlı olarak, uygulama bir metin arıyorsa, döndürülen sonuçlarda diğer metinlerin arasında eşleşen metinler de bulunur. Örneğin, eğer <quote
+>gi</quote
+>  ifadesini arıyorsanız, arama işlemi bu ifadeyi içeren <quote
+>bil<emphasis
+>gi</emphasis
+></quote
+> ya da <quote
+>il<emphasis
+>gi</emphasis
+>nç</quote
+> gibi her sözcükte durur. Eğer bu seçeneği işaretlerseniz, uygulama,  etrafında boşluklar olan, sadece metnin kendisinin yer aldığı sonuçları döndürür.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>İmleçten itibaren</guilabel
+></term>
+<listitem
+><para
+>Arama, imleç konumundan başlatılır ve metnin sonunda durdurulur.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Geriye doğru bul</guilabel
+></term>
+<listitem
+><para
+>Öntanımlı olarak, uygulama, metni belgenin başından başlayarak arar ve sonuna kadar devam eder. Bu seçeneği işaretlerseniz, arama işlemi belgenin sonundan başına doğru yapılır. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Seçili metin</guilabel
+></term>
+<listitem
+><para
+>Tüm belge yerine sadece seçili metinde arama yapmak için bu seçeneği işaretleyin. Eğer seçili metin yoksa pasifleştirilir. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Bul işlevi sadece birinci eşleşmeyi seçer. Aramaya devam etmek için <menuchoice
+><guimenu
+>Düzen</guimenu
+><guimenuitem
+>Sonrakini Bul</guimenuitem
+></menuchoice
+> yolunu izleyin ya da <keycap
+>F3</keycap
+> tuşuna basın.</para>
+
+<screenshot id="screenshot-find-found">
+<screeninfo
+>Bir Arama Örneği</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="find-found.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Bir arama örneği.</phrase
+></textobject>
+<caption
+><para
+>&kmail;, <userinput
+>yazılım</userinput
+> için bir eşleşme gösteriyor. </para
+></caption>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="find-replace">
+<title
+>Değiştirme İşlevi</title>
+
+<para
+>Değiştirme işlevi belge içerisinde metin arar ve bulunan metni diğer bir metin ile değiştirir. Bu işleve birçok uygulamada <menuchoice
+><guimenu
+>Düzen</guimenu
+><guisubmenu
+>Değiştir</guisubmenu
+></menuchoice
+> menüsünden ya da <keycombo action="simul"
+>&Ctrl;<keycap
+>R</keycap
+></keycombo
+> kısayolunu kullanarak erişebilirsiniz.</para>
+
+<screenshot id="screenshot-find-replace">
+<screeninfo
+>Değiştir Penceresi</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="find-replace.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Değiştir penceresi.</phrase
+></textobject>
+<caption
+><para
+>&kmail; içerisinde <userinput
+>yiyecek</userinput
+> ile <userinput
+>içecek</userinput
+> sözcüklerini değiştirmek</para
+></caption>
+</mediaobject>
+</screenshot>
+
+<para
+>Değiştir işlevinin penceresi 3 bölüme ayrılmıştır:</para>
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Bul</guilabel
+></term>
+<listitem
+><para
+>Buraya aramak istediğiniz metni girebilirsiniz. <xref linkend="find-find"/> bölümünde daha fazla bilgi bulabilirsiniz. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Değiştir</guilabel
+></term>
+<listitem>
+<para
+>Buraya, bulunan metin ile değiştirilmesini istediğiniz metni girin.</para>
+
+<para
+>Bulunan metni <guilabel
+>Yer tutucuları kullan</guilabel
+> işaretleme kutusunu kullanarak değiştirme metninde yeniden kullanabilirsiniz. Yer tutucular geri-referans olarak da bilinir. Geri-referans özel karakter dizisi anlamına gelir. Bu diziler bulunan metnin tamamıyla ya da bir bölümüyle değiştirilebilir. Örneğin <quote
+>\0</quote
+>, arama sonucunda bulunan tüm ifadeyi temsil eder.</para>
+<para
+><guibutton
+>Yer Tutucu Ekle</guibutton
+> düğmesine tıklayarak metne yer tutucular ekleyebilirsiniz. Ardından menüden <guimenuitem
+>Tam Eşleşme</guimenuitem
+> gibi bir ögeyi seçebilirsiniz. Örneğin, eğer  <quote
+>ileti</quote
+> sözcüğünü arıyor ve <guilabel
+>iletiler</guilabel
+> ile değiştirmek istiyorsanız, <guimenuitem
+>Tam Eşleşme</guimenuitem
+> yer tutucusunu girin ve <quote
+>ler</quote
+> ekleyin. Değiştirme alanı <quote
+>\0ler</quote
+> içerecektir.</para>
+
+<para
+>Eğer &kate; kurulu ise bu uygulamanın <ulink url="help:/kate/regular-expressions.html"
+>belgelendirmesinde bulunan Düzenli İfadeler</ulink
+> bölümünden  yer tutucular hakkında daha fazla bilgi alabilirsiniz.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Seçenekler</guilabel
+></term>
+<listitem
+><para
+>Bu, <link linkend="find-find"
+>Bul</link
+> işlevi ile aynı seçenekleri içerir ve şu ek seçenekleri sunar:</para>
+<para
+>Eğer <guilabel
+>Değiştirmeden önce sor</guilabel
+> seçeneği işaretliyse, bulunan her sözcükte bir pencere açılarak değiştirme işlemini onaylamanız istenecektir.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+
+<sect2 id="find-ack">
+<title
+>Teşekkürler ve Destek Olanlar</title>
+<para
+>Bu belgenin çoğunu yazan Anonim Google Code-In 2011 katılımcısına özellikle teşekkürler.</para>
+</sect2>
+
+</sect1>
+
+
+<sect1 id="fonts">
+<sect1info>
+<authorgroup>
+<author
+>&TC.Hollingsworth; &TC.Hollingsworth.mail;</author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+</sect1info>
+<title
+>Yazı Tiplerini Seçmek</title>
+
+<para
+>Yazı tipi seçici birçok &kde; uygulamasında kullanılır. Bu araç, uygulamanızda metinlerin gösterileceği yazı tipi görünümünü, biçimini ve boyutunu seçmenizi sağlar.</para>
+
+<screenshot id="screenshot-fonts">
+<screeninfo
+>Yazı Tipi Seçici</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="fonts.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Yazı tipi seçici.</phrase
+></textobject>
+<caption
+><para
+><ulink url="help:/systemsettings"
+>&systemsettings;</ulink
+> içerisinden bir yazı tipi seçmek</para
+></caption>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Yazı Tipi</guilabel
+></term>
+<listitem
+><para
+>Bu en soldaki kutudur ve sisteminizde kurulu olan yazı tiplerinden birini seçmenizi sağlar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Yazı tipi biçimi</guilabel
+></term>
+<listitem>
+<para
+>Bu ana seçim kutusudur ve yazı tipi biçimini şu seçeneklerden birini kullanarak seçmenizi sağlar:</para>
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Eğik</guilabel
+> - bu, metni el yazısı gibi, genellikle alıntılarda ve metni vurgulamak için kullanılan, eğimli şekilde gösterir. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Normal</guilabel
+> - öntanımlıdır. Metin, herhangi bir özel görünüm özelliği olmadan gösterilir.</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Kalın Eğik</guilabel
+> - <guilabel
+>Kalın</guilabel
+> ve <guilabel
+>Eğik</guilabel
+> özelliklerinin birleşimidir</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Kalın</guilabel
+> - bu, metni koyu, kalın şekilde ve genellikle belge başlıkları ya da metni vurgulamak için kullanılan şekilde gösterir.</para
+></listitem>
+
+</itemizedlist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Boyut</guilabel
+></term>
+<listitem
+><para
+>Bu en sağda yer alan kutudur ve metninizin boyutunu seçmenizi sağlar. Yazı tipi boyutu, tipografide standart birim olan <emphasis
+>nokta</emphasis
+> ile ölçülür. Bununla ilgili daha fazla bilgi almak için <ulink url="http://en.wikipedia.org/wiki/Point_(typography)"
+> Wikipedia'daki <quote
+>Nokta (tipografi)</quote
+> makalesine bakın</ulink
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Önizleme</term>
+<listitem
+><para
+>Yazı tipi seçicinin en altında, o anda belirlenmiş olan yazı tipi ayarlarını kullanan bir metin önizlemesi vardır. Eğer isterseniz bu metni değiştirebilirsiniz.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+
+<sect1 id="colors">
+<sect1info>
+<authorgroup>
+<author
+>&TC.Hollingsworth; &TC.Hollingsworth.mail;</author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+</sect1info>
+<title
+>Renkleri Seçmek</title>
+
+<para
+>Renk seçici, bir renk seçmenizi gerektiren birçok &kde; uygulamasında kullanılır. Bu araç, önceden tanımlanmış renklerden oluşan ya da kendi renklerinizi eklediğiniz bir <quote
+>paletten</quote
+> renk seçmenizi sağlar.</para>
+
+<screenshot id="screenshot-colors">
+<screeninfo
+>Renk Seçici</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="colors.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Renk seçici.</phrase
+></textobject>
+<caption
+><para
+><ulink url="help:/systemsettings"
+>&systemsettings;</ulink
+> içerisinde bir renk seçmek.</para
+></caption>
+</mediaobject>
+</screenshot>
+
+<sect2 id="colors-palette">
+<title
+>Paletleri Kullanmak</title>
+
+<para
+>Bir palet önceden tanımlanmış renkler grubudur. Paleti, renk seçici penceresinin sağ tarafında bulabilirsiniz.</para>
+
+<para
+>Bir paletten renk seçmek için sadece rengin üzerine tıklamanız yeterlidir. Renk, &HTML; onaltılık kodu ve eğer varsa adı ile birlikte paletin altında gösterilecektir.</para>
+
+<para
+>Renk paletini değiştirmek için yukarıdaki açılabilir kutucuğu kullanın. Paletlerin çoğu, renkleri isimleriyle seçmenizi sağlayan <guilabel
+>İsimlendirilmiş Renker</guilabel
+> paleti hariç, renklerden oluşan bir ızgara gösterir. Diğer özel paletler şunlardır: <guilabel
+>*Son Kullanılan Renkler *</guilabel
+>, seçtiğiniz son renkeri gösterir. <guilabel
+>* Özel Renkler *</guilabel
+>, kaydettiğiniz özel renkleri gösterir. Özel renkler ile ilgili daha fazla bilgi almak için <xref linkend="colors-custom"/> bölümüne bakın.</para>
+
+</sect2>
+
+<sect2 id="colors-mixing">
+<title
+>Renkleri Karıştırmak</title>
+
+<para
+>Renk  seçici kendi renklerinizi karıştırmanızı da sağlar. Bunu yapmanın yolları:</para>
+
+<sect3 id="colors-mixing-select">
+<title
+>Izgara Kullanımı</title>
+
+<para
+>Renk seçicinin sol tarafında geniş bir kutu ve o kutunun hemen sağında ince bir kutu vardır. Soldaki kutuyu, kutunun sağladığı görsel kılavuzu kullanarak seçilen rengin Ton ve Doygunluk tercihleri için kullanabilirsiniz. Sağdaki sütun ise Değer'i ayarlar. İstenilen rengi elde etmek için pencerenin sağ alt köşesine yakın yerde bulunan rengi ayarlamak için bu ayarlama alanlarını kullanın.</para>
+
+<para
+>Ton, Doygunluk ve Değer ile ilgili daha fazla bilgi için <xref linkend="colors-mixing-hsv"/> bölümüne bakın.</para>
+
+</sect3>
+
+<sect3 id="colors-mixing-eyedropper">
+<title
+>Damlalığın Kullanımı</title>
+
+<para
+>Damlalık aracı ekrandan renk seçmenize yarar. Bu aracı kullanmak için, <guibutton
+>Özel Renkler Ekle</guibutton
+> düğmesinin sağındaki <guibutton
+>damlalık</guibutton
+> düğmesine tıklayıp, ardından ekranın herhangi bir yerindeki rengi seçmek için o rengin bulunduğu yere tıklayın.</para>
+
+</sect3>
+
+<sect3 id="colors-mixing-hsv">
+<title
+>Ton/Doygunluk/Değer</title>
+
+<para
+>Ekranın sol alt köşesine yakın yerdeki seçim alanları, istenilen rengi elde etmeniz için Ton/Doygunluk/Değer (Hue,Saturation,Value sözcüklerinin akronimi <acronym
+>HSV</acronym
+>) renk bileşenlerini elle girmenizi sağlar. Bununla ilgili daha fazla bilgi almak için <ulink url="https://en.wikipedia.org/wiki/HSL_and_HSV"
+>Wikipedia'daki <quote
+>HSL ve HSV</quote
+></ulink
+> makalesine bakın.</para>
+
+<para
+>Bu değerler diğer yöntemlerle bir renk seçtiğinizde de güncellenir. Bu nedenle, bu değerler tam olarak o anda seçilen rengi gösterir.</para>
+
+</sect3>
+
+<sect3 id="colors-mixing-rgb">
+<title
+>Kırmızı/Yeşil/Mavi</title>
+
+<para
+>Ekranın sol alt köşesine yakın yerdeki seçim alanlarının bir bölümü de istenilen rengi elde etmeniz için Kırmızı/Yeşil/Mavi (Red,Green,Blue sözcüklerinin akronimi <acronym
+>RGB</acronym
+>) renk bileşenlerini elle girmenizi sağlar. Bununla ilgili daha fazla bilgi almak için <ulink url="https://en.wikipedia.org/wiki/RGB_color_"
+>Wikipedia'daki <quote
+>RGB renk modeli</quote
+></ulink
+> makalesine bakın.</para>
+
+<para
+>Bu değerler diğer yöntemlerle bir renk seçtiğinizde de güncellenir. Bu nedenle, bu değerler tam olarak o anda seçilen rengi gösterir.</para>
+
+</sect3>
+
+<sect3 id="colors-mixing-HTML">
+<title
+>&HTML; Onaltılık Kod</title>
+
+<para
+>Ekranın sağ alt köşesine yakın alanında, elde etmek istediğiniz rengi gösteren kutunun sağındaki alana, &HTML; onaltılık renk kodunu girebilirsiniz. Bununla ilgili daha fazla bilgi almak için <ulink url="http://en.wikipedia.org/wiki/Web_colors"
+>Wikipedia'daki <quote
+>Web renkleri</quote
+></ulink
+> makalesine bakın.</para>
+
+<para
+>Bu değer diğer yöntemlerle bir renk seçtiğinizde de güncellenir. Bu nedenle, bu değer tam olarak o anda seçilen rengi gösterir.</para>
+
+</sect3>
+</sect2>
+
+<sect2 id="colors-custom">
+<title
+>Özel Renkleri Kaydetmek</title>
+
+<para
+>Bir renk seçtikten sonra, bu rengi daha sonra kullanabilmek için Özel Renkler paletine kaydedebilirsiniz. Bunu yapmak için, <guibutton
+>Özel Renkler Ekle</guibutton
+> düğmesine tıklayın. Kaydettiğiniz bu rengi, sağ üst köşeye yakın yerde bulunan açılabilir menüden <guilabel
+>* Özel Renkler *</guilabel
+> paletini seçerek bulabilirsiniz. Paletlerin kullanımı ile ilgili daha fazla bilgi için <xref linkend="colors-palette"/> bölümüne bakın.</para>
+
+</sect2>
+
+</sect1>
+
+</chapter>

@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
+"dtd/kdex.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<article lang="&language;">
+<title
+>Belgelendirme Bulunamadı</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Jack</firstname
+> <surname
+>Ostroff</surname
+> <affiliation
+> <address
+><email
+>ostroffjh@users.sourceforge.net</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2010-09-21</date>
+<releaseinfo
+>&kde; 4.5</releaseinfo>
+
+</articleinfo>
+
+<para
+>İstenilen belgelendirme bilgisayarınızda bulunamadı. Normal olarak &kde; uygulama el kitaplarını &kde; kurulumuna göre değişen bir konumda arar. İstediğiniz belgelendirmenin bulunamamasının çeşitli nedenleri olabilir. Belge var olmayabilir ya da uygulamanın yanında kurulmamış olabilir.</para>
+
+<para
+>Bu sorunun çözümü:</para>
+
+<para
+>Öncelikle aradığınız belgelendirmeyi <ulink url="http://docs.kde.org/"
+>KDE Belgelendirme Sitesi</ulink
+>'nde arayın. Eğer bu sitede aradığınız belgelendirmeyi bulduysanız, kullandığınız dağıtım belgelendirmeleri (&kmail;, &kontact; gibi tüm kde-pim uygulamaları için kde-pim-doc gibi) ayrı bir paket ile sunuyor olabilir. Eksik belgelendirmeleri bulmak ve yüklemek için lütfen kullandığınız dağıtımın paket yöneticisini kullanın.</para>
+
+<para
+>Eğer Gentoo gibi kaynak temelli bir dağıtım kullanıyorsanız, belgelendirmelerin kurulumunu pasifleştiren bir yapılandırmanız olup olmadığına bakın. </para>
+
+<para
+>Bunu da yapmanıza rağmen uygulamanın el kitabı yerine hala bu sayfayı görüyorsanız muhtemelen bir &kde; yardım sitemi hatası yakalamışsınız demektir. Lütfen bu hatayı <ulink url="http://bugs.kde.org/"
+>KDE Hata İzleme</ulink
+> sistemini kullanarak bildirin. </para>
+
+<para
+><ulink url="http://docs.kde.org/"
+>KDE Belgelendirme site</ulink
+>sinde aradığınız belgelendirmeyi bulamadıysanız, uygulamanın çevrimdışı belgelendirmesi olmayabilir. Lütfen bu durumu <ulink url="http://bugs.kde.org/"
+>KDE Hata İzleme</ulink
+> sistemini kullanarak bildirin. </para>
+
+<para
+>Uygulamanın çevrimdışı belgelendirmesinin olmadığı durumlarda çevrimiçi kaynakları kullanabilirsiniz. Yardım almak için <ulink url="http://userbase.kde.org/"
+>UserBase Belgelendirmeleri</ulink
+> ve <ulink url="http://forum.kde.org/"
+>KDE Topluluk Forumlarını</ulink
+> kullanın. </para>
+
+</article>
